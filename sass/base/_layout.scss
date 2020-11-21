@@ -1,0 +1,29 @@
+    .template {
+        display: grid;
+        grid-template-columns: 10fr 3fr;
+        grid-template-rows: 7.5rem calc(100vh - 7.5rem);
+
+        &__nav {
+            background-color: blue;
+            height: 7.5rem;
+            width: 100%;
+        }
+
+        &__section {
+            background-color: yellow;
+            width: 100%;
+            height: 100vh;
+        }
+
+        &__main {
+            background-color: green;
+
+            &-container {
+                margin: 2rem;
+                background-color: bisque;
+                width: calc(100% - 4rem); 
+                height: 30rem;  
+                display: inline-block;
+            }
+        }   
+    }

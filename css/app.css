@@ -17,3 +17,24 @@ body {
   position: relative;
   scroll-behavior: smooth;
   overflow: hidden; }
+
+.template {
+  display: grid;
+  grid-template-columns: 10fr 3fr;
+  grid-template-rows: 7.5rem calc(100vh - 7.5rem); }
+  .template__nav {
+    background-color: blue;
+    height: 7.5rem;
+    width: 100%; }
+  .template__section {
+    background-color: yellow;
+    width: 100%;
+    height: 100vh; }
+  .template__main {
+    background-color: green; }
+    .template__main-container {
+      margin: 2rem;
+      background-color: bisque;
+      width: calc(100% - 4rem);
+      height: 30rem;
+      display: inline-block; }
