@@ -1,0 +1,20 @@
+//MEDIA QUERIES
+
+@mixin small-desk {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+//ladnscape mode on mobile and tablet -> display only the game
+@mixin landscape {
+  @media (max-width: 900px) and (orientation: landscape) {
+    @content;
+  }
+}

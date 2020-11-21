@@ -1,8 +1,19 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: inherit; }
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%; }
+  @media (max-width: 900px) and (orientation: portrait) {
+    html {
+      font-size: 56.25%; } }
+
 body {
-  font-family: 'Montserrat', sans-serif;
-}
+  box-sizing: border-box;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow: hidden; }
