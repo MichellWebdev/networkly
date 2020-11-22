@@ -1,53 +1,169 @@
- // LOGIN/SIGNUP
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 
- // Alfa Slab One 32px networkly
- // Montserrat 42px SemiBold main title
- // Montserrat 24px Regular subtitle
- // Montserrat 22px Medium card title
- // Montserrat 16px Regular card paragraph 
- // Montserrat 18px SemiBold buttons
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
 
- // MODAL
+@font-face {
+    font-family: "AlfaSlab One";
+    src: url("../assets/typography/AlfaSlabOne-Regular.ttf"); 
+}
 
- // Montserrat 36px ExtraBold title
- // Roboto 16px Medium label
- // Montserrat 26px Bold image title
- // Montserrat 20px Regular image paragraph
- // Montserrat 18px SemiBold buttons
+// Signup/Login title
 
- // MAIN
+.text__1-montserrat_bold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+}
 
- // Montserrat 20px Semibold nav
- // Roboto 32px Bold containers title
- // Roboto 16px Medium see more link
- // Montserrat 20px Bold event card title 
- // Roboto 14px Medium event card smaller text
- // Roboto 20px Light event card paragraph
+// Networkly
 
- // Montserrat 20px Bold careerup card title 
- // Roboto 14px Medium careerup card smaller text
- // Roboto 20px Light careerup card paragraph
- 
- // Montserrat 20px Bold jobscompanies card title 
- // Roboto 14px Medium jobscompanies card smaller text
- // Roboto 20px Light jobscompanies card paragraph
+.text__2-alfaslab {
+    font-family: "AlfaSlab One";
+    font-size: 3.2rem;
+}
 
- // Montserrat 16px Semibold small CTA
- // Montserrat 18px SemiBold large CTA
- // Roboto 16px Medium filters
- // Roboto 16px Medium popup
- // Montserrat 20px Regular modal paragraph
- // Montserrat 14px Medium modal tag
+// Modal title
 
- // RIGHT
+.text__2-montserrat_extrabold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
 
- // Roboto 22px Medium user title
- // Roboto 22px Bold messages
- // Roboto 22px Regular profile
- // Roboto 18px Medium messaging with
- // Roboto 16px Medium messaging with occupation
- // Roboto 16px Regular messages
- // Roboto 16px Light messages date
- // Roboto 18px Medium user profile title
- // Roboto 14px Regular date
- // Roboto 16px Regular messages
+// Containers
+
+.text__2-roboto_bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+// Modal image title
+
+.text__3-montserrat_bold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+// Signup/login subtitle
+
+.text__3-montserrat_regular {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+// Signup/login card title
+
+.text__4-montserrat_medium {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+// Right user title
+
+.text__4-roboto_medium {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+// Right messages section title
+
+.text__4-roboto_bold {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+// Right profile
+
+.text__4-roboto_regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+// Nav items
+
+.text__5-montserrat_semibold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+// Card titles
+
+.text__5-montserrat_bold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+// Card paragraphs
+
+.text__5-montserrat_light {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+// Modal image paragraph
+
+.text__5-montserrat_regular {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+// Filters, popup, messaging with name, user profile name, see more
+
+.text__6-roboto_medium {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+// Login/signup card paragraph
+
+.text__7-montserrat_regular {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+// Messaging with occupation
+
+.text__7-roboto_medium {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+// Message itself, message when outside
+
+.text__7-roboto_regular {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+// Message date when chatting
+
+.text__7-roboto_light {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+// Any sort of smaller text, card, modal tag, date when outside msg
+
+.text__8-roboto_medium {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+

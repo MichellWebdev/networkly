@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap");
 *,
 *::after,
 *::before {
@@ -17,6 +18,109 @@ body {
   position: relative;
   scroll-behavior: smooth;
   overflow: hidden; }
+
+@font-face {
+  font-family: "AlfaSlab One";
+  src: url("../assets/typography/AlfaSlabOne-Regular.ttf"); }
+
+.text__1-montserrat_bold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.2rem;
+  font-weight: 700; }
+
+.text__2-alfaslab {
+  font-family: "AlfaSlab One";
+  font-size: 3.2rem; }
+
+.text__2-montserrat_extrabold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800; }
+
+.text__2-roboto_bold {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700; }
+
+.text__3-montserrat_bold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700; }
+
+.text__3-montserrat_regular {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400; }
+
+.text__4-montserrat_medium {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500; }
+
+.text__4-roboto_medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500; }
+
+.text__4-roboto_bold {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700; }
+
+.text__4-roboto_regular {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400; }
+
+.text__5-montserrat_semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600; }
+
+.text__5-montserrat_bold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.text__5-montserrat_light {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 300; }
+
+.text__5-montserrat_regular {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 300; }
+
+.text__6-roboto_medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+.text__7-montserrat_regular {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300; }
+
+.text__7-roboto_medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500; }
+
+.text__7-roboto_regular {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+.text__7-roboto_light {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300; }
+
+.text__8-roboto_medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500; }
 
 .template {
   display: grid;
