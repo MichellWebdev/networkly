@@ -5,4 +5,25 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    &-item {
+        margin: 3rem;
+        color: $neutral-darkblack;
+        text-decoration: none;
+
+        &_active {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                left: 0;
+                bottom: -4px;
+                width: 100%;
+                background-color: $color-mediumpink;
+            }
+            
+        }
+    }
 }

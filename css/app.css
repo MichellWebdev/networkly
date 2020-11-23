@@ -149,3 +149,17 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
+  .template__nav-item {
+    margin: 3rem;
+    color: #030c10;
+    text-decoration: none; }
+    .template__nav-item_active {
+      position: relative; }
+      .template__nav-item_active::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        background-color: #E5134B; }
