@@ -9,13 +9,14 @@
         }
 
         &__section {
-            background-color: yellow;
+            box-shadow: $medium-shadow;
+            z-index: 3;
             width: 100%;
             height: 100vh;
         }
 
         &__main {
-            background-color: green;
+            background-color: $neutral-dirtywhite;
 
             &-container {
                 margin: 2rem;
