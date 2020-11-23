@@ -9,8 +9,9 @@
 html {
 	overflow-x: hidden;
 	font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+	color: $neutral-darkblack;  
  
-	@include tablet {
+	@include tablet { 
 		font-size: 56.25%;
 	}
 }
