@@ -1,0 +1,12 @@
+.article__event {
+
+    &-image {
+        width: 50px;
+    }
+    
+    &-content_details {
+        &-icon {
+            width: $universal-icon-size;
+        }
+    }
+}

@@ -11,6 +11,14 @@
             color: white;
             font-weight: 600; 
         }
+
+        &-event {
+            width: 10rem;
+            height: 3.5rem;
+            background-color: $color-mediumgreen;
+            color: white;
+            font-weight: 600;  
+        }
     }
 
     &__large { 
