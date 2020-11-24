@@ -138,9 +138,10 @@ body {
   .template__main {
     background-color: #F5F5F5; }
     .template__main-container {
-      margin: 2rem;
-      background-color: bisque;
-      width: calc(100% - 4rem);
+      padding: 1rem;
+      margin: 2.5rem;
+      background-color: white;
+      width: calc(100% - 5rem);
       height: 30rem;
       display: inline-block; }
 
@@ -184,6 +185,37 @@ body {
         bottom: -4px;
         width: 100%;
         background-color: #E5134B; }
+
+input::placeholder {
+  font-size: 1.8rem; }
+
+.main__search {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  .main__search-image {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: #F0F8F7;
+    height: 4.5rem;
+    border: 1px solid #DBDBDB;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem; }
+    .main__search-image img {
+      width: 2.5rem; }
+  .main__search input {
+    width: 15vw;
+    display: inline-block;
+    height: 4.5rem;
+    background-color: #F0F8F7;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 1px solid #DBDBDB;
+    border-left: 0; }
+    .main__search input::placeholder {
+      color: #A5A5A5; }
 
 .right__section-user {
   height: 7.5rem;

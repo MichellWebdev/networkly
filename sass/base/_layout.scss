@@ -19,9 +19,10 @@
             background-color: $neutral-dirtywhite;
 
             &-container {
-                margin: 2rem;
-                background-color: bisque;
-                width: calc(100% - 4rem); 
+                padding: 1rem;
+                margin: 2.5rem;
+                background-color: white;
+                width: calc(100% - 5rem); 
                 height: 30rem;  
                 display: inline-block;
             }
