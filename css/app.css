@@ -289,8 +289,19 @@ input::placeholder {
 .right__section-search {
   height: 7rem; }
 
-.article__event-image {
-  width: 50px; }
-
-.article__event-content_details-icon {
-  width: 2.5rem; }
+.article__event {
+  width: 25vw;
+  border: 1px solid #F8F3F0; }
+  .article__event-image {
+    width: 100%;
+    height: 20rem;
+    background: url("/assets/images/event_placeholder.jpg");
+    background-size: cover; }
+  .article__event-content {
+    padding: 1.5rem; }
+    .article__event-content h3 {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #C8C8C8;
+      margin-bottom: 0.5rem; }
+    .article__event-content_metadata-icon {
+      width: 2.5rem; }
