@@ -1,0 +1,55 @@
+.right__section {
+    &-user {
+        height: 7.5rem;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.5px solid $neutral-lightgrey40;
+
+        img {
+            width: 3.5vw;
+            height: 3.5vw;
+            border-radius: 3.5vw;
+            object-fit: cover;
+        }
+
+        h4 {
+            margin: 0 1rem;
+        }
+
+        button {
+            position: absolute;
+            right: 2rem;
+        }
+    }
+
+    &-navigation {
+        height: 5rem;
+        display: flex;
+        border-bottom: 0.5px solid $neutral-lightgrey40;
+        align-items: center;
+
+        &_item {  
+            width: 50%;
+            text-align: center;
+            position: relative;
+
+            &-active {
+
+                &::after {
+                    content: ""; 
+                    position: absolute;
+                    height: 3px;
+                    left: 0;
+                    bottom: -11px;
+                    width: 100%;
+                    background-color: $color-darkviolet;
+                }
+            }
+        }
+    }
+
+    &-search {
+        height: 7rem;
+    }
+}
