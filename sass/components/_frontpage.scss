@@ -1,0 +1,22 @@
+#login-page {
+  background-image: url('../../images/frontpage.png');
+  height: 400px;
+  width: 100%;
+}
+
+.login-page__section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &-logo {
+    margin: 2%;
+  }
+}
+
+.login-btn {
+  width: 15%;
+  height: 30px;
+  margin: 2%;
+  justify-self: right;
+  background-color: white;
+  border: 0;
+}
