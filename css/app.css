@@ -20,7 +20,7 @@ body {
   overflow: hidden; }
 
 @font-face {
-  font-family: "AlfaSlab One";
+  font-family: 'AlfaSlab One';
   src: url("../assets/typography/AlfaSlabOne-Regular.ttf"); }
 
 .text__1-montserrat_bold {
@@ -29,7 +29,7 @@ body {
   font-weight: 700; }
 
 .text__2-alfaslab {
-  font-family: "AlfaSlab One";
+  font-family: 'AlfaSlab One';
   font-size: 3.2rem; }
 
 .text__2-montserrat_extrabold {
@@ -142,3 +142,22 @@ body {
       width: calc(100% - 4rem);
       height: 30rem;
       display: inline-block; }
+
+#login-page {
+  background-image: url("../../images/frontpage.png");
+  height: 400px;
+  width: 100%; }
+
+.login-page__section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .login-page__section1-logo {
+    margin: 2%; }
+
+.login-btn {
+  width: 15%;
+  height: 30px;
+  margin: 2%;
+  justify-self: right;
+  background-color: white;
+  border: 0; }
