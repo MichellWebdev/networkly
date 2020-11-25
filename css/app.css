@@ -318,6 +318,9 @@ input::placeholder {
   .login-page__section1-logo {
     margin: 2%;
     color: white; }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__section1-logo {
+        margin: 4%; } }
 
 .login-btn {
   width: 12%;
@@ -330,6 +333,10 @@ input::placeholder {
   border-radius: 5px;
   font-size: 1.2rem;
   text-transform: uppercase; }
+  @media (max-width: 900px) and (orientation: portrait) {
+    .login-btn {
+      width: 50%;
+      margin: 4%; } }
 
 .login-page__s2 {
   display: grid;
@@ -340,8 +347,18 @@ input::placeholder {
   .login-page__s2-box {
     width: 40%;
     text-align: center; }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__s2-box {
+        width: 90%; } }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__s2-box > h1 {
+        font-size: 3.5rem; } }
   .login-page__s2-box__text {
     margin-top: 3%; }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__s2-box__text {
+        font-size: 2rem;
+        margin-top: 10%; } }
   .login-page__s2-button {
     width: 30%;
     height: 45px;
@@ -352,15 +369,23 @@ input::placeholder {
     border-radius: 5px;
     text-transform: uppercase;
     font-size: 1.2rem; }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__s2-button {
+        width: 50%;
+        height: 35px;
+        margin-top: 10%; } }
 
 .login-page__s3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 0.5rem;
   background-color: #F5F5F5;
-  height: 100vh;
-  padding: 5% 15%;
-  justify-content: space-evenly; }
+  padding: 5% 15%; }
+  @media (max-width: 900px) and (orientation: portrait) {
+    .login-page__s3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 3rem; } }
   .login-page__s3-cards {
     display: grid;
     grid-template-rows: 6fr 1fr 4fr;
@@ -370,6 +395,9 @@ input::placeholder {
     background-color: white;
     border: 1px solid #e1e1e1;
     border-radius: 7px; }
+    @media (max-width: 900px) and (orientation: portrait) {
+      .login-page__s3-cards {
+        width: 100%; } }
     .login-page__s3-cards-icon {
       display: grid;
       width: 40%;
@@ -381,7 +409,13 @@ input::placeholder {
       padding: 0.5rem 1.5rem;
       text-align: center;
       font-size: 1.6rem; }
+      @media (max-width: 900px) and (orientation: portrait) {
+        .login-page__s3-cards-header {
+          font-size: 1.8rem; } }
     .login-page__s3-cards-text {
       padding: 0.5rem 1.5rem;
       text-align: center;
       font-size: 1.2rem; }
+      @media (max-width: 900px) and (orientation: portrait) {
+        .login-page__s3-cards-text {
+          font-size: 1.5rem; } }
