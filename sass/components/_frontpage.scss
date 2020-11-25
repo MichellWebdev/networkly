@@ -1,7 +1,8 @@
 #login-page {
-  background-image: url('../../images/frontpage.png');
-  height: 400px;
-  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../../images/frontpage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
 }
 
 .login-page__section1 {
@@ -9,14 +10,74 @@
   grid-template-columns: 1fr 1fr;
   &-logo {
     margin: 2%;
+    color: white;
   }
 }
 
 .login-btn {
-  width: 15%;
+  width: 12%;
   height: 30px;
   margin: 2%;
   justify-self: right;
+  align-self: center;
   background-color: white;
   border: 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.login-page__s2 {
+  display: grid;
+  height: 400px;
+  color: white;
+  justify-items: center;
+  align-items: center;
+  &-box {
+    width: 40%;
+    text-align: center;
+  }
+  &-box__text {
+    margin-top: 3%;
+  }
+  &-button {
+    width: 30%;
+    height: 45px;
+    margin-top: 3%;
+    background-color: #030c10;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
+
+.login-page__s3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+  background-color: $neutral-dirtywhite;
+  height: 100vh;
+  padding: 5% 15%;
+  justify-content: space-evenly;
+
+  &-cards {
+    display: grid;
+    grid-template-rows: 6fr 1fr 4fr;
+    justify-self: center;
+    width: 80%;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    &-icon {
+      display: grid;
+      width: 50%;
+      border-radius: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      justify-self: center;
+      align-self: center;
+    }
+  }
 }
