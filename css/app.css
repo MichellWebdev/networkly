@@ -369,11 +369,19 @@ input::placeholder {
     height: 300px;
     background-color: white;
     border: 1px solid #e1e1e1;
-    border-radius: 10px; }
+    border-radius: 7px; }
     .login-page__s3-cards-icon {
       display: grid;
-      width: 50%;
+      width: 40%;
       border-radius: 50%;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
       justify-self: center;
       align-self: center; }
+    .login-page__s3-cards-header {
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font-size: 1.6rem; }
+    .login-page__s3-cards-text {
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font-size: 1.2rem; }
