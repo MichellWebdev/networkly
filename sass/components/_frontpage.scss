@@ -156,3 +156,50 @@
     }
   }
 }
+
+// MODAL FOR LOGIN
+.loginModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content__login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ffffff;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  &-image {
+    width: 30%;
+  }
+}
+
+.closeLoginModal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeLoginModal:hover,
+.closeLoginModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// MODAL FOR SIGNUP PART 1
+
+// MODAL FOR SIGNUP PART 2
