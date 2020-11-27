@@ -30,6 +30,10 @@
   font-size: 1.2rem;
   text-transform: uppercase;
 
+  @include small-desk {
+    width: 25%;
+  }
+
   @include tablet {
     width: 50%;
     margin: 4%;
@@ -45,9 +49,15 @@
   &-box {
     width: 40%;
     text-align: center;
+
+    @include small-desk {
+      width: 70%;
+    }
+
     @include tablet {
       width: 90%;
     }
+
     > h1 {
       @include tablet {
         font-size: 3.5rem;
@@ -88,6 +98,16 @@
   background-color: $neutral-dirtywhite;
   padding: 5% 15%;
 
+  @include small-desk {
+    padding: 5% 5%;
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+
   @include tablet {
     display: grid;
     grid-template-columns: 1fr;
@@ -104,8 +124,8 @@
     border: 1px solid #e1e1e1;
     border-radius: 7px;
 
-    @include tablet {
-      width: 100%;
+    @media (max-width: 768px) {
+      width: 80%;
     }
 
     &-icon {

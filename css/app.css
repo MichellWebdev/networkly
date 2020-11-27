@@ -333,6 +333,9 @@ input::placeholder {
   border-radius: 5px;
   font-size: 1.2rem;
   text-transform: uppercase; }
+  @media (max-width: 1100px) {
+    .login-btn {
+      width: 25%; } }
   @media (max-width: 900px) and (orientation: portrait) {
     .login-btn {
       width: 50%;
@@ -347,6 +350,9 @@ input::placeholder {
   .login-page__s2-box {
     width: 40%;
     text-align: center; }
+    @media (max-width: 1100px) {
+      .login-page__s2-box {
+        width: 70%; } }
     @media (max-width: 900px) and (orientation: portrait) {
       .login-page__s2-box {
         width: 90%; } }
@@ -381,6 +387,14 @@ input::placeholder {
   grid-gap: 0.5rem;
   background-color: #F5F5F5;
   padding: 5% 15%; }
+  @media (max-width: 1100px) {
+    .login-page__s3 {
+      padding: 5% 5%; } }
+  @media (max-width: 768px) {
+    .login-page__s3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem; } }
   @media (max-width: 900px) and (orientation: portrait) {
     .login-page__s3 {
       display: grid;
@@ -395,9 +409,9 @@ input::placeholder {
     background-color: white;
     border: 1px solid #e1e1e1;
     border-radius: 7px; }
-    @media (max-width: 900px) and (orientation: portrait) {
+    @media (max-width: 768px) {
       .login-page__s3-cards {
-        width: 100%; } }
+        width: 80%; } }
     .login-page__s3-cards-icon {
       display: grid;
       width: 40%;
