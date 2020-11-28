@@ -6,6 +6,10 @@
   }
 }
 
+// TODO: change tablet to be 768px without orientation
+
+// TODO: add mobile mixin for around 500px
+
 @mixin tablet {
   @media (max-width: 900px) and (orientation: portrait) {
     @content;

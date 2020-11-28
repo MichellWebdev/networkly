@@ -21,19 +21,25 @@
       <div id="loginModal" class="loginModal">
         <!-- Modal content -->
         <div class="modal-content__login">
-          <div>
-            <img class="modal-content__login-image" src="images/gatheringIcon.png" alt="">
-          </div>
-          <div>
-            <h1>networkly sharing experiences</h1>
+          <div class="modal-content__login-image"></div>
+          <div class="modal-content__login-form">
+            <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
             <form action="">
-              <label for="email">Email address</label>
-              <input type="text" name="email" id="email">
-              <label for="password">Password</label>
-              <input type="text" name="password" id="password">
+              <div class="modal-content__login-form-label">
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email">
+              </div>
+              <div class="modal-content__login-form-label">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+              </div>
+              <div>
+                <button>Log in</button>
+              </div>
             </form>
-            <span class="closeLoginModal">&times;</span>
+            <!-- TODO: Validation -->
           </div>
+          <span class="closeLoginModal">&times;</span>
         </div>
       </div>
     </div>

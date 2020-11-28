@@ -8,6 +8,7 @@
 .login-page__section1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   &-logo {
     margin: 2%;
     color: white;
@@ -26,9 +27,14 @@
   align-self: center;
   background-color: white;
   border: 0;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $neutral-dirtywhite;
+  }
 
   @include small-desk {
     width: 25%;
@@ -46,6 +52,7 @@
   color: white;
   justify-items: center;
   align-items: center;
+
   &-box {
     width: 40%;
     text-align: center;
@@ -64,6 +71,7 @@
       }
     }
   }
+
   &-box__text {
     margin-top: 3%;
 
@@ -72,6 +80,7 @@
       margin-top: 10%;
     }
   }
+
   &-button {
     width: 30%;
     height: 45px;
@@ -79,9 +88,14 @@
     background-color: #030c10;
     color: white;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     text-transform: uppercase;
     font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #000000;
+    }
 
     @include tablet {
       width: 50%;
@@ -136,6 +150,7 @@
       justify-self: center;
       align-self: center;
     }
+
     &-header {
       padding: 0.5rem 1.5rem;
       text-align: center;
@@ -145,6 +160,7 @@
         font-size: 1.8rem;
       }
     }
+
     &-text {
       padding: 0.5rem 1.5rem;
       text-align: center;
@@ -174,15 +190,46 @@
 
 .modal-content__login {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 5fr 5fr 0.3fr;
   background-color: #ffffff;
   width: 50%;
   margin: auto;
-  padding: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
   &-image {
-    width: 30%;
+    background-image: url('../../images/modal.png');
+    max-width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+  }
+
+  &-form {
+    padding: 20px;
+    display: grid;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+
+    &-label {
+      margin: 5% 0;
+    }
+
+    label {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 1rem;
+      border: 0;
+      border-radius: 0.5rem;
+      background-color: $color-lightbeige;
+    }
+    button {
+      width: 100%;
+    }
   }
 }
 
