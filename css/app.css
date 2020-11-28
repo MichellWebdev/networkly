@@ -330,9 +330,15 @@ input::placeholder {
   align-self: center;
   background-color: white;
   border: 0;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
+  .login-btn:hover {
+    background-color: #F5F5F5; }
+  @media (max-width: 1100px) {
+    .login-btn {
+      width: 25%; } }
   @media (max-width: 900px) and (orientation: portrait) {
     .login-btn {
       width: 50%;
@@ -347,6 +353,9 @@ input::placeholder {
   .login-page__s2-box {
     width: 40%;
     text-align: center; }
+    @media (max-width: 1100px) {
+      .login-page__s2-box {
+        width: 70%; } }
     @media (max-width: 900px) and (orientation: portrait) {
       .login-page__s2-box {
         width: 90%; } }
@@ -366,9 +375,12 @@ input::placeholder {
     background-color: #030c10;
     color: white;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     text-transform: uppercase;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    cursor: pointer; }
+    .login-page__s2-button:hover {
+      background-color: #000000; }
     @media (max-width: 900px) and (orientation: portrait) {
       .login-page__s2-button {
         width: 50%;
@@ -381,6 +393,14 @@ input::placeholder {
   grid-gap: 0.5rem;
   background-color: #F5F5F5;
   padding: 5% 15%; }
+  @media (max-width: 1100px) {
+    .login-page__s3 {
+      padding: 5% 5%; } }
+  @media (max-width: 768px) {
+    .login-page__s3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem; } }
   @media (max-width: 900px) and (orientation: portrait) {
     .login-page__s3 {
       display: grid;
@@ -395,9 +415,9 @@ input::placeholder {
     background-color: white;
     border: 1px solid #e1e1e1;
     border-radius: 7px; }
-    @media (max-width: 900px) and (orientation: portrait) {
+    @media (max-width: 768px) {
       .login-page__s3-cards {
-        width: 100%; } }
+        width: 80%; } }
     .login-page__s3-cards-icon {
       display: grid;
       width: 40%;
@@ -419,3 +439,62 @@ input::placeholder {
       @media (max-width: 900px) and (orientation: portrait) {
         .login-page__s3-cards-text {
           font-size: 1.5rem; } }
+
+.loginModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content__login {
+  display: grid;
+  grid-template-columns: 5fr 5fr 0.3fr;
+  background-color: #ffffff;
+  width: 50%;
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+  .modal-content__login-image {
+    background-image: url("../../images/modal.png");
+    max-width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%); }
+  .modal-content__login-form {
+    padding: 20px;
+    display: grid;
+    width: 80%;
+    align-self: center;
+    justify-self: center; }
+    .modal-content__login-form-label {
+      margin: 5% 0; }
+    .modal-content__login-form label {
+      width: 100%; }
+    .modal-content__login-form input {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 1rem;
+      border: 0;
+      border-radius: 0.5rem;
+      background-color: #F8F3F0; }
+    .modal-content__login-form button {
+      width: 100%; }
+
+.closeLoginModal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.closeLoginModal:hover,
+.closeLoginModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }

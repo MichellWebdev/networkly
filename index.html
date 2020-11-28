@@ -16,7 +16,32 @@
   <div id="login-page">
     <div class="login-page__section1">
       <h1 class="text__2-alfaslab login-page__section1-logo">Networkly</h1>
-      <button class="text__4-montserrat_medium login-btn">Log in</button>
+      <button id="loginButton" class="text__4-montserrat_medium login-btn">Log in</button>
+      <!-- MODAL FOR LOGIN -->
+      <div id="loginModal" class="loginModal">
+        <!-- Modal content -->
+        <div class="modal-content__login">
+          <div class="modal-content__login-image"></div>
+          <div class="modal-content__login-form">
+            <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
+            <form action="">
+              <div class="modal-content__login-form-label">
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email">
+              </div>
+              <div class="modal-content__login-form-label">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+              </div>
+              <div>
+                <button>Log in</button>
+              </div>
+            </form>
+            <!-- TODO: Validation -->
+          </div>
+          <span class="closeLoginModal">&times;</span>
+        </div>
+      </div>
     </div>
     <hr>
     <div class="login-page__s2">
@@ -67,7 +92,10 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+
+  <!-- MODAL FOR SIGNUP -->
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>
