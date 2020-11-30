@@ -1,36 +1,37 @@
 .btn {
-    border: 0;
-    border-radius: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-     
-    &__small {
-        &-dark {
-            width: 10rem;
-            height: 3.5rem;
-            background-color: $neutral-darkblack90;
-            color: white;
-            font-weight: 600; 
-        }
+  border: 0;
+  border-radius: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
 
-        &-event {
-            width: 10rem;
-            height: 3.5rem;
-            background-color: $color-mediumgreen;
-            color: white;
-            font-weight: 600;  
-        }
+  &__small {
+    &-dark {
+      width: 10rem;
+      height: 3.5rem;
+      background-color: $neutral-darkblack90;
+      color: white;
+      font-weight: 600;
     }
 
-    &__large { 
-        &-green {
-            max-width: 20rem; 
-            min-width: 18rem;
-            height: 4.5rem;
-            font-size: 1.8rem;
-            font-weight: 600;
-            background-color: $color-darkgreen;
-            color: white;
-           
-        }
+    &-event {
+      width: 10rem;
+      height: 3.5rem;
+      background-color: $color-mediumgreen;
+      color: white;
+      font-weight: 600;
     }
+  }
+
+  &__large {
+    &-green {
+      max-width: 20rem;
+      min-width: 18rem;
+      height: 4.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      background-color: $color-darkgreen;
+      color: white;
+    }
+  }
 }
