@@ -16,32 +16,49 @@
   <div id="login-page">
     <div class="login-page__section1">
       <h1 class="text__2-alfaslab login-page__section1-logo">Networkly</h1>
-      <button id="loginButton" class="text__4-montserrat_medium login-btn">Log in</button>
+      <button id="loginButton" class="text__4-montserrat_medium btn login-btn">Log in</button>
       <!-- MODAL FOR LOGIN -->
       <div id="loginModal" class="loginModal">
-        <!-- Modal content -->
         <div class="modal-content__login">
-          <div class="modal-content__login-image"></div>
+          <div class="modal-content__login-image">
+            <!-- text on image -->
+            <div class="modal-content__login-text">
+              <div class="modal-content__login-text-box">
+                <h1 class="text__3-montserrat_bold">Not signed up yet?</h1>
+                <p class="text__3-montserrat_regular modal-content__login-text-box__content">Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Minima neque eius ratione corporis sequi quidem libero consectetur.</p>
+                <button class="text__3-montserrat_bold btn btn__small-dark modal-content__login-text-box__btn">Sign
+                  up</button>
+              </div>
+            </div>
+            <!-- text on image end -->
+          </div>
           <div class="modal-content__login-form">
             <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
-            <form action="">
-              <div class="modal-content__login-form-label">
+            <form action="home.html">
+              <div class="text__7-roboto_regular modal-content__login-form-label">
                 <label for="email">Email address</label>
-                <input type="text" name="email" id="email">
+                <input class="modal-content__login-form-input" type="text" name="email" id="email">
               </div>
-              <div class="modal-content__login-form-label">
+              <div class="text__7-roboto_regular modal-content__login-form-label">
                 <label for="password">Password</label>
-                <input type="text" name="password" id="password">
+                <input class="modal-content__login-form-input" type="text" name="password" id="password">
+              </div>
+              <div class="text__7-roboto_regular modal-content__login-form-checkbox">
+                <input name="checkbox" type="checkbox">
+                <label for="checkbox">Remember me</label>
               </div>
               <div>
-                <button>Log in</button>
+                <button class="text__4-montserrat_medium btn btn__small-dark">Log in</button>
               </div>
+              <p class="text__7-roboto_regular modal-content__login-form-forgotPassword">Forgot password?</p>
             </form>
             <!-- TODO: Validation -->
           </div>
           <span class="closeLoginModal">&times;</span>
         </div>
       </div>
+      <!-- END MODAL LOGIN -->
     </div>
     <hr>
     <div class="login-page__s2">
@@ -53,7 +70,7 @@
           your network rapidly. Enjoy
           countless events
           and get immersed into a world of professional bliss.</p>
-        <button class="text__4-montserrat_medium login-page__s2-button">Join us now</button>
+        <button class="text__4-montserrat_medium btn login-page__s2-button">Join us now</button>
       </div>
     </div>
   </div>
