@@ -1,0 +1,201 @@
+.article_post {
+    width: 98%;
+    max-height: 250px;
+    border: 1px solid $color-lightbeige;
+    border-radius: 1rem;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template: 
+    "image header info actions" 45px
+    "image content info actions" 190px
+    / minmax(20%, 350px) auto 50px 50px;
+
+    // max-width: 768px
+    @include tablet {
+       grid-template: 
+        "image" 100px
+        "header" 30px
+        "content" 200px
+        "info" 30px
+        "actions" 30px
+        / 1fr;
+
+        .article_post-image {
+            grid-area: image;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            position: relative;
+        
+            img {
+                width: 100%;
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+            }
+        }
+
+        .article_post-content {
+            font-size: 20px;
+        }
+    };
+
+    @include phone {
+       grid-template: 
+        "image" 250px
+        "header" 60px
+        "content" 300px
+        "info" 80px
+        "actions" 80px
+        / 300px;
+
+        .article_post-content {
+            font-size: 20px;
+        }
+    };
+}
+
+.article_post-image {
+    grid-area: image;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    // height: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    &_date{
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        top: 80%;
+        padding: 0;
+        background-image: linear-gradient(transparent, $neutral-mediumblack);
+        // background-color: rgba($neutral-mediumblack, 0.5);
+        color: white;
+        padding: 5%;
+        border-bottom-left-radius: 1rem;
+    }
+}
+    
+.article_post-header {
+    grid-area: header;
+    padding: 20px;
+    
+    h3 {
+        font-size: 1.3vw;
+    }
+
+    &_authorAndTags {
+        font-size: 0.8vw;
+        color: darken($color:$neutral-mediumgrey2, $amount: 20);
+        padding: 10px 0;
+
+        span {
+            margin-right: 3%;
+            font-size: 0.8vw;
+        }
+    }
+
+    button {
+        font-size: 0.8vw;
+    }
+}
+    
+.article_post-content {
+    grid-area: content;
+    padding: 20px;
+    margin-top: 40px;
+    padding-bottom: 0;
+
+    columns: 40px 2;
+    width: 95%;
+    height: 100%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1vw;
+}
+    
+.article_post-info {
+    grid-area: info;
+
+    width: 50%;
+    height: 50%;
+    display: grid;
+    // grid-gap: 2rem;
+    grid-template-rows: 1fr 1fr;
+    color: darken($color:$neutral-mediumgrey2, $amount: 20);
+    text-align: center;
+
+    &_views {
+        margin: 50% 0;
+        padding: 10px;
+        div {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+
+    &_replies {
+        background-color: $color-lightgreen;
+        border-radius: 0.5rem;
+
+        margin: 0;
+        padding: 10px;
+        div {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+    
+.article_post-actions {
+    grid-area: actions;
+    margin-left: 35px;
+    // position: relative;
+
+    div:nth-of-type(1) {
+        // position: absolute;
+        margin: auto;
+        top: 20%;
+        border: 1.5px solid $color-lightbeige;
+        background-color: white;
+        height: 50px;
+        width: 35px;
+        align-items: center;
+
+        img {
+            width: 50%;
+            float: left;
+            margin-top: 15px;
+        }
+    }
+
+    div:nth-of-type(2) {
+        // position: absolute;
+        margin: auto;
+        top: 50%;
+        border: 1.5px solid $color-lightbeige;
+        background-color: white;
+        height: 50px;
+        width: 35px;
+        align-items: center;
+
+        img {
+            width: 50%;
+            float: left;
+            margin-top: 15px;
+        }
+    }
+}
