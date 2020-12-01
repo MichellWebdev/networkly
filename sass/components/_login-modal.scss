@@ -41,35 +41,6 @@
     clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
   }
 
-  &-text {
-    display: grid;
-    height: 550px;
-    color: white;
-    justify-items: center;
-    align-items: center;
-
-    &-box {
-      width: 80%;
-      text-align: center;
-
-      &__content {
-        margin-top: 3%;
-        font-size: 1.8rem;
-      }
-
-      &__btn {
-        border: 0;
-        color: black;
-        background-color: white;
-        margin-top: 5%;
-        font-size: 1.4rem;
-        &:hover {
-          background-color: $neutral-dirtywhite;
-        }
-      }
-    }
-  }
-
   &-form {
     padding: 20px;
     display: grid;
@@ -95,15 +66,17 @@
       width: 100%;
       height: 30px;
       margin-bottom: 1rem;
-      border: 0;
+      border: 1px solid #e1e1e1;
       border-radius: 0.5rem;
       background-color: $color-lightbeige;
+      padding: 0.5rem;
     }
 
     button {
       width: 100%;
       font-size: 1.4rem;
       font-weight: 500;
+
       &:hover {
         background-color: black;
       }

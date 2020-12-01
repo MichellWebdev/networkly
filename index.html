@@ -22,12 +22,12 @@
         <div class="modal-content__login">
           <div class="modal-content__login-image">
             <!-- text on image -->
-            <div class="modal-content__login-text">
-              <div class="modal-content__login-text-box">
+            <div class="modal-content__text">
+              <div class="modal-content__text-box">
                 <h1 class="text__3-montserrat_bold">Not signed up yet?</h1>
-                <p class="text__3-montserrat_regular modal-content__login-text-box__content">Lorem ipsum dolor sit amet
+                <p class="text__3-montserrat_regular modal-content__text-box--content">Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Minima neque eius ratione corporis sequi quidem libero consectetur.</p>
-                <button class="text__3-montserrat_bold btn btn__small-dark modal-content__login-text-box__btn">Sign
+                <button class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Sign
                   up</button>
               </div>
             </div>
@@ -42,7 +42,7 @@
               </div>
               <div class="text__7-roboto_regular modal-content__login-form-label">
                 <label for="password">Password</label>
-                <input class="modal-content__login-form-input" type="text" name="password" id="password">
+                <input class="modal-content__login-form-input" type="password" name="password" id="password">
               </div>
               <div class="text__7-roboto_regular modal-content__login-form-checkbox">
                 <input name="checkbox" type="checkbox">
@@ -73,9 +73,53 @@
         <button id="signupButton" class="text__4-montserrat_medium btn login-page__s2-button">Join us now</button>
         <!-- Modal for signup -->
         <div id="signupModal" class="signupModal">
-          <div class="modal-content-signup">
+          <div class="modal-content">
             <span class="closeSignupModal">&times;</span>
-            <p>Some text in the Modal..</p>
+            <div class="modal-content__form">
+              <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
+              <form action="home.html">
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="fullName">Full Name*</label>
+                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="email">Email address*</label>
+                  <input class="modal-content__form-input" type="text" name="email" id="email" required>
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-fields--password">
+                  <div>
+                    <label for="password">Password*</label>
+                    <input class="modal-content__form-password" type="password" name="password" id="password" required>
+                  </div>
+                  <div>
+                    <label for="password">Repeat password*</label>
+                    <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
+                      required>
+                  </div>
+                </div>
+                <div>
+                  <button class="text__4-montserrat_medium btn btn__small-dark">Next</button>
+                </div>
+              </form>
+              <!-- TODO: Validation -->
+            </div>
+            <div class="modal-content__image">
+              <!-- text on image -->
+              <div class="modal-content__text">
+                <div class="modal-content__text-box">
+                  <h1 class="text__3-montserrat_bold">Already have an account?</h1>
+                  <p class="text__3-montserrat_regular modal-content__text-box--content">Lorem ipsum dolor sit
+                    amet
+                    consectetur adipisicing elit. Minima neque eius ratione corporis sequi quidem libero consectetur.
+                  </p>
+                  <button onclick="displayLoginModal()"
+                    class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Log
+                    in</button>
+                  <!-- TODO: CLICK ON BUTTON GO TO LOGIN MODAL! -->
+                </div>
+              </div>
+              <!-- text on image end -->
+            </div>
           </div>
         </div>
         <!-- Modal signup END -->
