@@ -80,9 +80,8 @@
 
 .main__posts {
 
-    @include phone {
-        width: 320px;
-    }
+    height: auto;
+    // width: 100vw;
 
     &-header,
     &-subheader {
