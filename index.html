@@ -27,7 +27,8 @@
                 <h1 class="text__3-montserrat_bold">Not signed up yet?</h1>
                 <p class="text__3-montserrat_regular modal-content__text-box--content">Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Minima neque eius ratione corporis sequi quidem libero consectetur.</p>
-                <button class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Sign
+                <button onclick="displaySignupModal()"
+                  class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Sign
                   up</button>
               </div>
             </div>
@@ -38,11 +39,11 @@
             <form action="home.html">
               <div class="text__7-roboto_regular modal-content__login-form-label">
                 <label for="email">Email address</label>
-                <input class="modal-content__login-form-input" type="text" name="email" id="email">
+                <input class="modal-content__login-form-input" type="text" name="email" id="email" required>
               </div>
               <div class="text__7-roboto_regular modal-content__login-form-label">
                 <label for="password">Password</label>
-                <input class="modal-content__login-form-input" type="password" name="password" id="password">
+                <input class="modal-content__login-form-input" type="password" name="password" id="password" required>
               </div>
               <div class="text__7-roboto_regular modal-content__login-form-checkbox">
                 <input name="checkbox" type="checkbox">
@@ -71,36 +72,34 @@
           countless events
           and get immersed into a world of professional bliss.</p>
         <button id="signupButton" class="text__4-montserrat_medium btn login-page__s2-button">Join us now</button>
-        <!-- Modal for signup -->
+        <!-- Modal for signup part 1 -->
         <div id="signupModal" class="signupModal">
           <div class="modal-content">
             <span class="closeSignupModal">&times;</span>
             <div class="modal-content__form">
               <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
-              <form action="home.html">
-                <div class="text__7-roboto_regular modal-content__form-fields">
-                  <label for="fullName">Full Name*</label>
-                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
-                </div>
-                <div class="text__7-roboto_regular modal-content__form-fields">
-                  <label for="email">Email address*</label>
-                  <input class="modal-content__form-input" type="text" name="email" id="email" required>
-                </div>
-                <div class="text__7-roboto_regular modal-content__form-fields--password">
-                  <div>
-                    <label for="password">Password*</label>
-                    <input class="modal-content__form-password" type="password" name="password" id="password" required>
-                  </div>
-                  <div>
-                    <label for="password">Repeat password*</label>
-                    <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
-                      required>
-                  </div>
+              <div class="text__7-roboto_regular modal-content__form-fields">
+                <label for="fullName">Full Name*</label>
+                <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
+              </div>
+              <div class="text__7-roboto_regular modal-content__form-fields">
+                <label for="email">Email address*</label>
+                <input class="modal-content__form-input" type="text" name="email" id="email" required>
+              </div>
+              <div class="text__7-roboto_regular modal-content__form-fields--password">
+                <div>
+                  <label for="password">Password*</label>
+                  <input class="modal-content__form-password" type="password" name="password" id="password" required>
                 </div>
                 <div>
-                  <button class="text__4-montserrat_medium btn btn__small-dark">Next</button>
+                  <label for="password">Repeat password*</label>
+                  <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
+                    required>
                 </div>
-              </form>
+              </div>
+              <div>
+                <button onclick="openSecondModal()" class="text__4-montserrat_medium btn btn__small-dark">Next</button>
+              </div>
               <!-- TODO: Validation -->
             </div>
             <div class="modal-content__image">
@@ -115,6 +114,58 @@
                   <button onclick="displayLoginModal()"
                     class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Log
                     in</button>
+                </div>
+              </div>
+              <!-- text on image end -->
+            </div>
+          </div>
+        </div>
+        <!-- Modal signup part 1 END -->
+        <!-- Signup modal part 2 -->
+        <div id="signupModalTwo" class="signupModalTwo">
+          <div class="modal-content">
+            <span class="closeSignupModalTwo">&times;</span>
+            <div class="modal-content__form">
+              <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
+              <form action="home.html">
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="fullName">Profession</label>
+                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName">
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="email">Country</label>
+                  <select class="modal-content__form-input" name="country" id="country">
+                    <option value=""></option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Romania">Romania</option>
+                  </select>
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-checkbox">
+                  <input name="checkbox" type="checkbox" required>
+                  <label for="checkbox">I accept my data being processed*</label>
+                </div>
+                <div>
+                  <button class="text__4-montserrat_medium btn btn__small-dark">Sign up</button>
+                </div>
+              </form>
+              <!-- TODO: Validation -->
+            </div>
+            <div class="modal-content__image">
+              <!-- text on image -->
+              <div class="modal-content__text">
+                <div class="modal-content__text-box">
+                  <h1 class="text__3-montserrat_bold">Already have an account?</h1>
+                  <p class="text__3-montserrat_regular modal-content__text-box--content">Lorem ipsum dolor sit
+                    amet
+                    consectetur adipisicing elit. Minima neque eius ratione corporis sequi quidem libero
+                    consectetur.
+                  </p>
+                  <button onclick="displayLoginModal()"
+                    class="text__3-montserrat_bold btn btn__small-dark modal-content__text-box--btn">Log
+                    in</button>
                   <!-- TODO: CLICK ON BUTTON GO TO LOGIN MODAL! -->
                 </div>
               </div>
@@ -122,7 +173,7 @@
             </div>
           </div>
         </div>
-        <!-- Modal signup END -->
+        <!-- END SIGNUP MODAL PART 2 -->
       </div>
     </div>
   </div>
