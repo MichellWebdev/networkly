@@ -64,3 +64,5 @@ function displaySignupModal() {
   loginModal.style.display = 'none';
   signupModal.style.display = 'block';
 }
+
+// Validation for modals
