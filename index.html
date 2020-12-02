@@ -80,7 +80,8 @@
                 <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
                 <div class="text__7-roboto_regular modal-content__form-fields">
                   <label for="fullName">Full Name*</label>
-                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
+                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required
+                    onchange="validation()">
                 </div>
                 <div class="text__7-roboto_regular modal-content__form-fields">
                   <label for="email">Email address*</label>
@@ -93,13 +94,11 @@
                   </div>
                   <div>
                     <label for="password">Repeat password*</label>
-                    <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
-                      required>
+                    <input class="modal-content__form-password" type="password" name="password" id="repeatPassword">
                   </div>
                 </div>
                 <div>
-                  <button onclick="openSecondModal()"
-                    class="text__4-montserrat_medium btn btn__small-dark">Next</button>
+                  <button class="text__4-montserrat_medium btn btn__small-dark">Next</button>
                 </div>
                 <div>
                   <input type="hidden">

@@ -65,13 +65,11 @@ function displaySignupModal() {
   signupModal.style.display = 'block';
 }
 
-// // Validation for modals
-// function validateForm() {
-//   let validationMessage = document.getElementsByClassName('validationMessage');
-//   let validation = document.forms['signupForm']['fullName'].value;
-//   if (validation == '') {
-//     validationMessage.style.display = 'none';
-//     return false;
-//   }
-// }
-// // this does not work at ll
+function validation() {
+  let fullName = document.getElementById('fullName').value;
+  if(fullName = '') {
+    return false;
+  } else {
+    openSecondModal();
+  }
+}
