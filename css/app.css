@@ -730,6 +730,11 @@ input::placeholder {
       border-radius: 0.5rem;
       background-color: #F8F3F0;
       padding: 0.5rem; }
+    .modal-content__form-validation {
+      color: #AC9890;
+      margin-top: 0.2%;
+      font-size: 1rem;
+      display: none; }
     .modal-content__form button {
       width: 100%;
       font-size: 1.4rem;

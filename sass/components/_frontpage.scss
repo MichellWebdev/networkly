@@ -300,6 +300,13 @@
       padding: 0.5rem;
     }
 
+    &-validation {
+      color: $color-mediumbeige;
+      margin-top: 0.2%;
+      font-size: 1rem;
+      display: none;
+    }
+
     button {
       width: 100%;
       font-size: 1.4rem;

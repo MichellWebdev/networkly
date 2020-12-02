@@ -54,7 +54,6 @@
               </div>
               <p class="text__7-roboto_regular modal-content__login-form-forgotPassword">Forgot password?</p>
             </form>
-            <!-- TODO: Validation -->
           </div>
           <span class="closeLoginModal">&times;</span>
         </div>
@@ -77,30 +76,35 @@
           <div class="modal-content">
             <span class="closeSignupModal">&times;</span>
             <div class="modal-content__form">
-              <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
-              <div class="text__7-roboto_regular modal-content__form-fields">
-                <label for="fullName">Full Name*</label>
-                <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
-              </div>
-              <div class="text__7-roboto_regular modal-content__form-fields">
-                <label for="email">Email address*</label>
-                <input class="modal-content__form-input" type="text" name="email" id="email" required>
-              </div>
-              <div class="text__7-roboto_regular modal-content__form-fields--password">
-                <div>
-                  <label for="password">Password*</label>
-                  <input class="modal-content__form-password" type="password" name="password" id="password" required>
+              <form name="signupForm" onsubmit="return false">
+                <h1 class="text__2-montserrat_extrabold">Networkly sharing experiences</h1>
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="fullName">Full Name*</label>
+                  <input class="modal-content__form-input" type="text" name="fullName" id="fullName" required>
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-fields">
+                  <label for="email">Email address*</label>
+                  <input class="modal-content__form-input" type="text" name="email" id="email" required>
+                </div>
+                <div class="text__7-roboto_regular modal-content__form-fields--password">
+                  <div>
+                    <label for="password">Password*</label>
+                    <input class="modal-content__form-password" type="password" name="password" id="password" required>
+                  </div>
+                  <div>
+                    <label for="password">Repeat password*</label>
+                    <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
+                      required>
+                  </div>
                 </div>
                 <div>
-                  <label for="password">Repeat password*</label>
-                  <input class="modal-content__form-password" type="password" name="password" id="repeatPassword"
-                    required>
+                  <button onclick="openSecondModal()"
+                    class="text__4-montserrat_medium btn btn__small-dark">Next</button>
                 </div>
-              </div>
-              <div>
-                <button onclick="openSecondModal()" class="text__4-montserrat_medium btn btn__small-dark">Next</button>
-              </div>
-              <!-- TODO: Validation -->
+                <div>
+                  <input type="hidden">
+                </div>
+              </form>
             </div>
             <div class="modal-content__image">
               <!-- text on image -->
@@ -151,7 +155,6 @@
                   <button class="text__4-montserrat_medium btn btn__small-dark">Sign up</button>
                 </div>
               </form>
-              <!-- TODO: Validation -->
             </div>
             <div class="modal-content__image">
               <!-- text on image -->
