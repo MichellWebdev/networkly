@@ -65,4 +65,11 @@ function displaySignupModal() {
   signupModal.style.display = 'block';
 }
 
-// Validation for modals
+function validation() {
+  let fullName = document.getElementById('fullName').value;
+  if(fullName = '') {
+    return false;
+  } else {
+    openSecondModal();
+  }
+}
