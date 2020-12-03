@@ -3,15 +3,16 @@
 
 @import 'base/animations';
 @import 'base/base';
-@import 'base/typography';
 @import 'base/layout';
+@import 'base/typography';
 
 @import 'components/button';
-@import 'components/nav';
-@import 'components/menu';
-@import 'components/form';
-@import 'components/right';
 @import 'components/event';
-@import 'components/post';
+@import 'components/form';
 @import 'components/frontpage';
+@import 'components/hyperlink';
 @import 'components/login-modal';
+@import 'components/menu';
+@import 'components/nav';
+@import 'components/post';
+@import 'components/right';

@@ -5,7 +5,9 @@ input::placeholder {
 }
 
 .main__search {
-    width: 100%;
+    // Changed by Clara - "Browse Events" hyperlink was not streched because of this
+    // Please feel free to change back if you need to!
+    // width: 100%;
     display: flex;
     align-items: center;
     
@@ -26,7 +28,10 @@ input::placeholder {
     }    
 
     input {
-        width: 15vw;
+        // width: 15vw;
+        // Changed by Clara
+        // Please feel free to change it back if you need to
+        min-width: 15vw;
         display: inline-block;
         height: 4.5rem;
         background-color: $color-lightgreen3;

@@ -1,0 +1,13 @@
+.hyperlink_seemore {
+    color: $color-mediumpink;
+    padding: 10px;
+}
+
+.hyperlink_breadcrumb {
+    text-decoration: underline;
+}
+
+.hyperlink_breadcrumb:visited {
+    text-decoration: none;
+    color: black;
+}
