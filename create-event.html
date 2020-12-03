@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Up</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="template">
+        <nav class="template__nav">
+            <h1 class="text__2-alfaslab">Networkly</h1>
+            <a href="home.html" class="template__nav-item text__5-montserrat_semibold">Home</a>
+            <a href="create-event.html"
+                class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Events</a>
+            <a href="career-up.html" class="template__nav-item template__nav-item text__5-montserrat_semibold">Career
+                Up</a>
+            <a href="" class="template__nav-item text__5-montserrat_semibold">Jobs & Companies</a>
+        </nav>
+
+
+        <!-- Common Section - Messaging (DO NOT TOUCH) -->
+        <section class="template__section">
+            <div class="right__section-user">
+                <img src="assets/images/user_placeholder.png" alt="">
+                <h4 class="text__6-roboto_medium">John Lennon</h4>
+                <!-- ?? NEED UPDATE ?? -->
+                <button onclick="window.location.href = 'index.html'" class="btn btn__small-dark">LOGOUT</button>
+            </div>
+            <div class="right__section-navigation">
+                <h4 class="right__section-navigation_item right__section-navigation_item-active text__4-roboto_bold ">
+                    Messages</h4>
+                <h4 class="right__section-navigation_item text__4-roboto_regular">Profile</h4>
+            </div>
+            <div class="right__section-search">
+                <div class="main__search">
+                    <div class="main__search-image">
+                        <img src="assets/icons/search.png" alt="">
+                    </div>
+                    <input type="text" placeholder="Search users">
+                </div>
+            </div>
+            <div class="right__section-messages_container">
+                <article class="article__message">
+
+                </article>
+            </div>
+        </section>
+        <!-- Common Section - Messaging (DO NOT TOUCH) -->
+
+
+        <main class="template__main">
+
+            <section class="template__main-container">
+                <div class="main__events-header">
+                    <!-- <div class="main__search">
+                        <div class="main__search-image">
+                            <img src="assets/icons/search.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Search events">
+                    </div> -->
+                    <img onclick="window.location.href = 'events.html'" class="main__events-header__backbtn"
+                        src="assets/icons/back.png" alt="">
+                    <!-- <button class="btn btn__large-green">CREATE POST</button> -->
+                    <a href="events.html" class="hyperlink_seemore text__7-roboto_regular ">Browse Events</a>
+                </div>
+
+                <div class="main__events-subheader2">
+                    <div class="text__7-roboto_regular">
+                        <a class="hyperlink_breadcrumb" href="events.html">Events</a> /
+                        <!-- <span class="text__7-roboto_regular">Create Event</span> -->
+                    </div>
+                    <h2 class="text__2-roboto_bold">Create Event</h2>
+                </div>
+
+                <form action="">
+                    <div class="main__create_events">
+                        <div class="main__create_events__left">
+                            <div class="text__6-roboto_medium">Upload photo</div>
+                            <div class="text__6-roboto_light">Remove</div>
+                        </div>
+                        <div class="main__create_events__middle">
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_image">Event Image</label>
+                                <img id="create_event_image" src="assets/images/create_event_placeholder.jpg" alt="">
+                                <!-- src="assets/images/create_event_placeholder.jpg" -->
+                            </div>
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_name">Event Name</label>
+                                <input id="create_event_name" type="text" required>
+                            </div>
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_date">Date</label>
+                                <input id="create_event_date" type="text">
+                                <!-- <img src="" alt=""> -->
+                            </div>
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_location">Location</label>
+                                <input id="create_event_location" type="text">
+                            </div>
+                        </div>
+                        <div class="main__create_events__right">
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_description">Description</label>
+                                <textarea id="create_event_description" type="text"></textarea>
+                            </div>
+                            <div>
+                                <label class="text__6-roboto_light" for="create_event_participants">Participants</label>
+                                <input id="create_event_participants" type="text">
+                            </div>
+                            <div>
+                                <button type="button">John Smith <span class="remove_participant">&#215;</span></button>
+                                <button type="button">John Smith <span class="remove_participant">&#215;</span></button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn__medium-white"
+                                    onclick="window.location.href = 'events.html'">CANCEL EVENT</button>
+                                <button type="submit" class="btn btn__medium-green"> CREATE EVENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
