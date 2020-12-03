@@ -23,6 +23,30 @@
     }
   }
 
+  &__medium {
+
+    &-white {
+      max-width: 10vw;
+      min-width: 8vw;
+      height: 4rem;
+      font-size: 0.8vw;
+      font-weight: 600;
+      background-color: white;
+      color: $color-darkgreen;
+      border: 1px solid $color-darkgreen;
+    }
+
+    &-green {
+      max-width: 10vw;
+      min-width: 8vw;
+      height: 4rem;
+      font-size: 0.8vw;
+      font-weight: 600;
+      background-color: $color-darkgreen;
+      color: white;
+    }
+  }
+
   &__large {
     &-green {
       max-width: 20rem;

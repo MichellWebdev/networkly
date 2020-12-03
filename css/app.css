@@ -46,16 +46,22 @@ body {
       display: inline-block; }
 
 .main__events-header, .main__events-subheader,
+.main__create_events-header,
+.main__create_events-subheader,
 .main__posts-header,
 .main__posts-subheader {
   display: flex;
   justify-content: space-between; }
   .main__events-header__backbtn, .main__events-subheader__backbtn,
+  .main__create_events-header__backbtn,
+  .main__create_events-subheader__backbtn,
   .main__posts-header__backbtn,
   .main__posts-subheader__backbtn {
     height: 50px;
     fill: #43736C; }
   .main__events-header__backbtn:hover, .main__events-subheader__backbtn:hover,
+  .main__create_events-header__backbtn:hover,
+  .main__create_events-subheader__backbtn:hover,
   .main__posts-header__backbtn:hover,
   .main__posts-subheader__backbtn:hover {
     cursor: pointer;
@@ -63,22 +69,32 @@ body {
     background-color: #D4ECE8; }
 
 .main__events-subheader,
+.main__create_events-subheader,
 .main__posts-subheader {
+  margin: 2rem 0; }
+
+.main__events-subheader2,
+.main__create_events-subheader2,
+.main__posts-subheader2 {
   display: grid; }
 
 .main__events-filters,
+.main__create_events-filters,
 .main__posts-filters {
   list-style-type: none;
   color: #43736C; }
   .main__events-filters li:nth-of-type(1),
+  .main__create_events-filters li:nth-of-type(1),
   .main__posts-filters li:nth-of-type(1) {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem; }
   .main__events-filters li:last-of-type,
+  .main__create_events-filters li:last-of-type,
   .main__posts-filters li:last-of-type {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem; }
   .main__events-filters_item,
+  .main__create_events-filters_item,
   .main__posts-filters_item {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -87,9 +103,11 @@ body {
     background-color: white;
     border: 1px solid #7EC7BB; }
     .main__events-filters_item-active,
+    .main__create_events-filters_item-active,
     .main__posts-filters_item-active {
       background-color: #D4ECE8; }
     .main__events-filters_item-dropdown::after,
+    .main__create_events-filters_item-dropdown::after,
     .main__posts-filters_item-dropdown::after {
       content: '▾'; }
 
@@ -224,6 +242,23 @@ body {
     background-color: #7EC7BB;
     color: white;
     font-weight: 600; }
+  .btn__medium-white {
+    max-width: 10vw;
+    min-width: 8vw;
+    height: 4rem;
+    font-size: 0.8vw;
+    font-weight: 600;
+    background-color: white;
+    color: #43736C;
+    border: 1px solid #43736C; }
+  .btn__medium-green {
+    max-width: 10vw;
+    min-width: 8vw;
+    height: 4rem;
+    font-size: 0.8vw;
+    font-weight: 600;
+    background-color: #43736C;
+    color: white; }
   .btn__large-green {
     max-width: 20rem;
     min-width: 18rem;
@@ -245,6 +280,46 @@ body {
   .tag_post {
     background-color: #D5D8E9;
     color: #5D6285; }
+
+.main__create_events {
+  width: 50vw;
+  margin-top: 5vh;
+  display: grid;
+  grid-template: "left middle right" auto / 17vw 20vw 25vw; }
+  .main__create_events__left {
+    grid-area: left;
+    text-align: right;
+    margin-top: 80px; }
+    .main__create_events__left div {
+      margin-bottom: 10px; }
+  .main__create_events__middle {
+    grid-area: middle; }
+    .main__create_events__middle img {
+      width: 18vw; }
+    .main__create_events__middle div {
+      display: grid;
+      margin: 20px;
+      margin-bottom: 30px; }
+  .main__create_events__right {
+    grid-area: right;
+    margin-left: 5rem; }
+    .main__create_events__right div {
+      display: grid;
+      margin: 20px;
+      margin-bottom: 30px; }
+    .main__create_events__right div:nth-of-type(2) {
+      margin-bottom: 10px; }
+    .main__create_events__right div:nth-of-type(3) {
+      min-height: 10vh;
+      border: 1px solid blue; }
+      .main__create_events__right div:nth-of-type(3) button {
+        text-align: left; }
+    .main__create_events__right div:last-of-type {
+      display: flex;
+      align-items: center; }
+      .main__create_events__right div:last-of-type button {
+        padding: 10px;
+        margin: 0 auto; }
 
 .article__event {
   width: 25vw;
