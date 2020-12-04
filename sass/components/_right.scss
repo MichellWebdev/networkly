@@ -109,12 +109,128 @@
     &-chat {
         position: absolute;
         top: 0;
+        height: calc(100vh - 12rem);
         background-color: white;
 
         &_user {
+            padding: 1rem;
+            padding-top: 0;
+            border-bottom: 1px solid $neutral-lightgrey40;
+            
+            img, div {
+                display: inline-block;
+            }
+
             img {
                 width: $universal-icon-size;
             }
+
+            div {
+                margin-left: 1rem;
+            }
+        }
+
+        &_display {
+
+            .message-from {
+                display: flex;
+                margin: 1rem 2.5rem;
+                
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 5rem;
+                    object-fit: cover;
+                }
+
+                div {
+                    margin-left: 1rem;
+                }
+
+                p:first-of-type {
+                    background-color: $color-darkviolet;
+                    padding: 1rem;
+                    width: 80%;
+                    color: white;
+                    border-radius: 1rem;
+                }
+
+                p:last-of-type {
+                    color: $neutral-mediumgrey2;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            .message-to {
+                margin: 1rem 0;
+
+                * {
+                    float: right;
+                    margin-right: 2.5rem;
+                }
+
+                p:first-of-type {
+                    background-color: $color-mediumviolet;
+                    padding: 1rem;
+                    width: 60%;
+                    color: white;
+                    border-radius: 1rem;
+                }
+
+                p:last-of-type {
+                    color: $neutral-mediumgrey2;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        &_write {
+            &-adjust {
+                border: 1px solid $neutral-lightgrey40;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                padding: 1.5rem;
+            }
+
+            .write__actions {
+                display: flex;
+
+                img {
+                    width: $universal-icon-size;
+                    padding: 0.25rem;
+                }
+
+                &-action {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 4rem;
+                    margin-right: 1rem;
+                    background-color: $color-lightviolet;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .write__type {
+                display: flex;
+                align-items: center;
+            }
+
+            textarea {
+                margin: 1.5rem 0;
+                background-color: $color-lightviolet;
+                border: 0;
+                width: 80%;
+                height: 9vh;
+            }
+
+            button {
+                margin: 1rem;
+                margin-right: 0;
+            }
+
         }
     }
 }

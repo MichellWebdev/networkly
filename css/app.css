@@ -1276,6 +1276,80 @@ input::placeholder {
 .right__section-chat {
   position: absolute;
   top: 0;
+  height: calc(100vh - 12rem);
   background-color: white; }
-  .right__section-chat_user img {
-    width: 2.5rem; }
+  .right__section-chat_user {
+    padding: 1rem;
+    padding-top: 0;
+    border-bottom: 1px solid rgba(219, 219, 219, 0.5); }
+    .right__section-chat_user img, .right__section-chat_user div {
+      display: inline-block; }
+    .right__section-chat_user img {
+      width: 2.5rem; }
+    .right__section-chat_user div {
+      margin-left: 1rem; }
+  .right__section-chat_display .message-from {
+    display: flex;
+    margin: 1rem 2.5rem; }
+    .right__section-chat_display .message-from img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5rem;
+      object-fit: cover; }
+    .right__section-chat_display .message-from div {
+      margin-left: 1rem; }
+    .right__section-chat_display .message-from p:first-of-type {
+      background-color: #414770;
+      padding: 1rem;
+      width: 80%;
+      color: white;
+      border-radius: 1rem; }
+    .right__section-chat_display .message-from p:last-of-type {
+      color: #A5A5A5;
+      margin-top: 0.5rem; }
+  .right__section-chat_display .message-to {
+    margin: 1rem 0; }
+    .right__section-chat_display .message-to * {
+      float: right;
+      margin-right: 2.5rem; }
+    .right__section-chat_display .message-to p:first-of-type {
+      background-color: #5D6285;
+      padding: 1rem;
+      width: 60%;
+      color: white;
+      border-radius: 1rem; }
+    .right__section-chat_display .message-to p:last-of-type {
+      color: #A5A5A5;
+      margin-top: 0.5rem; }
+  .right__section-chat_write-adjust {
+    border: 1px solid rgba(219, 219, 219, 0.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1.5rem; }
+  .right__section-chat_write .write__actions {
+    display: flex; }
+    .right__section-chat_write .write__actions img {
+      width: 2.5rem;
+      padding: 0.25rem; }
+    .right__section-chat_write .write__actions-action {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 4rem;
+      margin-right: 1rem;
+      background-color: #D5D8E9;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .right__section-chat_write .write__type {
+    display: flex;
+    align-items: center; }
+  .right__section-chat_write textarea {
+    margin: 1.5rem 0;
+    background-color: #D5D8E9;
+    border: 0;
+    width: 80%;
+    height: 9vh; }
+  .right__section-chat_write button {
+    margin: 1rem;
+    margin-right: 0; }
