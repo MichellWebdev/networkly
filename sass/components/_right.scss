@@ -101,4 +101,20 @@
             border-bottom: 1px solid $neutral-lightgrey;
         }
     }
+
+    &-container {
+        position: relative;
+    }
+
+    &-chat {
+        position: absolute;
+        top: 0;
+        background-color: white;
+
+        &_user {
+            img {
+                width: $universal-icon-size;
+            }
+        }
+    }
 }

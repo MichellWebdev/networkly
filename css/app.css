@@ -1269,3 +1269,13 @@ input::placeholder {
 
 .right__section-messages_container:last-child {
   border-bottom: 1px solid #DBDBDB; }
+
+.right__section-container {
+  position: relative; }
+
+.right__section-chat {
+  position: absolute;
+  top: 0;
+  background-color: white; }
+  .right__section-chat_user img {
+    width: 2.5rem; }
