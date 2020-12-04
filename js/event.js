@@ -1,5 +1,6 @@
 var click = 0;
 var randNames = ['User A', 'User B', 'User C', 'User D', 'User E'];
+var cancelModal = document.getElementById('cancelModal');
 
 function populateDate() {
     document.getElementById('create_event_date').value = "March 4th, 2021"
@@ -17,4 +18,8 @@ function addAtendees() {
 
     document.getElementById('atendee_div').innerHTML = tag
     click++
+}
+
+function displayCancelModal() {
+    cancelModal.style.display = 'block';
 }

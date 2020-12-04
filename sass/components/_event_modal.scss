@@ -1,0 +1,140 @@
+.cancelModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  
+    @include phone {
+      padding-top: 0;
+    }
+  }
+  
+  .modal-content__login {
+    display: grid;
+    grid-template-columns: 5fr 5fr 0.3fr;
+    background-color: #ffffff;
+    width: 55%;
+    margin: auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  
+    @include small-desk {
+      width: 75%;
+    }
+  
+    @include tablet {
+      width: 90%;
+    }
+  
+    @include phone {
+      width: 100%;
+      height: 100vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+    }
+  
+    &-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../../images/modal.png');
+      max-width: 100%;
+      height: 550px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+  
+      @include phone {
+        height: 200px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+  
+    &-form {
+      padding: 20px;
+      display: grid;
+      width: 80%;
+      align-self: center;
+      justify-self: center;
+  
+      h1 {
+        margin-bottom: 1rem;
+      }
+  
+      &-label {
+        margin: 5% 0;
+      }
+  
+      label {
+        width: 100%;
+        color: $color-mediumbeige;
+        font-size: 1.3rem;
+      }
+  
+      &-input {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 1rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 0.5rem;
+        background-color: $color-lightbeige;
+        padding: 0.5rem;
+      }
+  
+      button {
+        width: 100%;
+        font-size: 1.4rem;
+        font-weight: 500;
+  
+        &:hover {
+          background-color: black;
+        }
+      }
+  
+      &-checkbox {
+        margin-bottom: 5%;
+  
+        input {
+          vertical-align: middle;
+        }
+  
+        label {
+          display: inline;
+          vertical-align: middle;
+          padding-left: 1rem;
+        }
+      }
+  
+      &-forgotPassword {
+        color: $color-mediumbeige;
+        font-size: 1.3rem;
+        margin-top: 2%;
+      }
+    }
+  }
+  
+  .closeLoginModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 0.5%;
+    height: 35px;
+  
+    @include phone {
+      position: fixed;
+      z-index: 1;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+  
+  .closeLoginModal:hover,
+  .closeLoginModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

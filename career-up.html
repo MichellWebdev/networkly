@@ -18,15 +18,16 @@
             <a href="career-up.html"
                 class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Career Up</a>
             <a href="/" class="template__nav-item text__5-montserrat_semibold">Jobs & Companies</a>
+            <div onclick="openMenu()" class="burger-menu"></div>
         </nav>
 
 
         <!-- Common Section - Messaging (DO NOT TOUCH) -->
         <section class="template__section">
             <div class="right__section-user">
+                <div onclick="closeMenu()" class="burger-menu"></div>
                 <img src="assets/images/user_placeholder.png" alt="">
                 <h4 class="text__6-roboto_medium">John Lennon</h4>
-                <!-- ?? NEED UPDATE ?? -->
                 <button onclick="window.location.href = 'index.html'" class="btn btn__small-dark">LOGOUT</button>
             </div>
             <div class="right__section-navigation">
@@ -34,18 +35,92 @@
                     Messages</h4>
                 <h4 class="right__section-navigation_item text__4-roboto_regular">Profile</h4>
             </div>
-            <div class="right__section-search">
-                <div class="main__search">
-                    <div class="main__search-image">
-                        <img src="assets/icons/search.png" alt="">
-                    </div>
-                    <input type="text" placeholder="Search users">
+            <div class="right__section-container">
+                <div class="right__section-menu">
+                    <a href="home.html" class="right__section-menu-item text__5-montserrat_semibold">Home</a>
+                    <a href="events.html" class="right__section-menu-item text__5-montserrat_semibold">Events</a>
+                    <a href="career-up.html"
+                        class="right__section-menu-item right__section-menu-item_active text__5-montserrat_semibold">Career
+                        Up</a>
+                    <a href="/" class="right__section-menu-item text__5-montserrat_semibold">Jobs & Companies</a>
                 </div>
-            </div>
-            <div class="right__section-messages_container">
-                <article class="article__message">
-
-                </article>
+                <div class="right__section-overview">
+                    <div class="right__section-search">
+                        <div class="main__search">
+                            <div class="main__search-image">
+                                <img src="assets/icons/search.png" alt="">
+                            </div>
+                            <input type="text" placeholder="Search users">
+                        </div>
+                    </div>
+                    <div class="right__section-messages_container">
+                        <article class="article__message" onclick="displayChat()">
+                            <div class="article__message-image">
+                                <div class="article__message-image_active"></div>
+                                <img src="assets/images/user_msg-placeholder1.jpg" alt="">
+                            </div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="article__message-date text__7-roboto_light">October 11</p>
+                            <p class="article__message-text text__7-roboto_light">Vivamus fringilla ligula lorem, in
+                                egestas est ornare id. Nulla commodo maximus mauris vitae interdum.</p>
+                        </article>
+                        <article class="article__message" onclick="displayChat()">
+                            <div class="article__message-image">
+                                <img src="assets/images/user_msg-placeholder2.jpg" alt="">
+                            </div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="article__message-date text__7-roboto_light">October 11</p>
+                            <p class="article__message-text text__7-roboto_light">Vivamus fringilla ligula lorem, in
+                                egestas est ornare id. Nulla commodo maximus mauris vitae interdum.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="right__section-chat">
+                    <div class="right__section-chat_user">
+                        <img onclick="displayOverview()" src="assets/icons/left-arrow.png" alt="">
+                        <div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="text__7-roboto_medium">Student at KEA</p>
+                        </div>
+                    </div>
+                    <div class="right__section-chat_display">
+                        <div class="message-from">
+                            <img src="assets/images/user_msg-placeholder1.jpg" alt="">
+                            <div>
+                                <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare
+                                    id. </p>
+                                <p class="text__7-roboto_light">14 October 2020 20:59</p>
+                            </div>
+                        </div>
+                        <div class="message-to">
+                            <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare id.
+                            </p>
+                            <p class="text__7-roboto_light">14 October 2020 20:59</p>
+                        </div>
+                    </div>
+                    <div class="right__section-chat_write">
+                        <div class="right__section-chat_write-adjust">
+                            <div class="write__actions">
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/happy.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/camera.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/gif.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/add.png" alt="">
+                                </div>
+                            </div>
+                            <div class="write__type">
+                                <textarea></textarea>
+                                <button class="btn btn__small-dark">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Common Section - Messaging (DO NOT TOUCH) -->
@@ -83,6 +158,11 @@
                             Popular
                         </li>
                     </ul>
+                    <ul class="main__events-filters_tablet">
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Filters
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -90,7 +170,9 @@
                     <div class="article_post">
                         <div class="article_post-image">
                             <img src="assets/images/post_placeholder.jpg">
-                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020</div></img>
+                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020
+                                <span class="article_post-image_date_author2">by Sarah Nahi</span>
+                            </div>
                         </div>
                         <div class="article_post-header">
                             <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
@@ -104,8 +186,7 @@
                         <div class="article_post-content text__6-roboto_light">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
 
                         <div class="article_post-info text__4-roboto_medium">
@@ -124,7 +205,9 @@
                     <div class="article_post">
                         <div class="article_post-image">
                             <img src="assets/images/post_placeholder.jpg">
-                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020</div></img>
+                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020
+                                <span class="article_post-image_date_author2">by Sarah Nahi</span>
+                            </div>
                         </div>
                         <div class="article_post-header">
                             <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
@@ -138,8 +221,7 @@
                         <div class="article_post-content text__6-roboto_light">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
 
                         <div class="article_post-info text__4-roboto_medium">
@@ -158,7 +240,9 @@
                     <div class="article_post">
                         <div class="article_post-image">
                             <img src="assets/images/post_placeholder.jpg">
-                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020</div></img>
+                            <div class="article_post-image_date text__8-roboto_light">24 November, 2020
+                                <span class="article_post-image_date_author2">by Sarah Nahi</span>
+                            </div>
                         </div>
                         <div class="article_post-header">
                             <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
@@ -172,8 +256,7 @@
                         <div class="article_post-content text__6-roboto_light">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
 
                         <div class="article_post-info text__4-roboto_medium">
@@ -194,7 +277,7 @@
 
         </main>
     </div>
-
+    <script src="js/messaging.js"></script>
 </body>
 
 </html>
