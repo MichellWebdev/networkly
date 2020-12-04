@@ -23,7 +23,7 @@ body {
 
 .template {
   display: grid;
-  grid-template-columns: 10fr 3fr;
+  grid-template-columns: 10fr 3.75fr;
   grid-template-rows: 7.5rem calc(100vh - 7.5rem); }
   .template__nav {
     height: 7.5rem;
@@ -68,8 +68,7 @@ body {
 .main__jobs-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 3rem; }
+  justify-content: space-evenly; }
 
 .main__events-header,
 .main__create_events-header,
@@ -118,7 +117,8 @@ body {
 .main__posts-subheader,
 .main__career-subheader,
 .main__jobs-subheader {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  margin-bottom: 2rem; }
   .main__events-subheader a,
   .main__create_events-subheader a,
   .main__posts-subheader a,
@@ -241,10 +241,10 @@ body {
   font-size: 2rem;
   font-weight: 700; }
 
-.text__5-montserrat_light {
+.text__6-montserrat_light {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 300; }
+  font-size: 1.6rem;
+  font-weight: 100; }
 
 .text__5-montserrat_regular {
   font-family: 'Montserrat', sans-serif;
@@ -310,7 +310,8 @@ body {
     color: white;
     font-weight: 600;
     margin-left: calc(50% - 6.5rem);
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    position: relative; }
     .btn__small-event::before {
       content: 'SAVE';
       margin-left: -1.5rem; }
@@ -343,7 +344,7 @@ body {
     max-width: 20rem;
     min-width: 18rem;
     height: 4.5rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     background-color: #43736C;
     color: white; }
@@ -1210,5 +1211,38 @@ input::placeholder {
       width: 100%;
       background-color: #414770; }
 
-.right__section-search {
-  height: 7rem; }
+.right__section-search .main__search {
+  margin: 1rem 0;
+  margin-left: calc(50% - 9vw); }
+
+.right__section-messages_container .article__message {
+  border: 1px solid #DBDBDB;
+  border-bottom: 0;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-rows: 0.5fr 2fr; }
+  .right__section-messages_container .article__message-image {
+    grid-column: 1/span 1;
+    grid-row: 1/span 2;
+    display: relative; }
+    .right__section-messages_container .article__message-image img {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+      border-radius: 7rem;
+      border: 1px solid #2C3338; }
+    .right__section-messages_container .article__message-image_active {
+      margin-left: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1.5rem;
+      background-color: #7EC7BB;
+      border: 1px solid #2C3338;
+      position: absolute; }
+  .right__section-messages_container .article__message-text {
+    grid-column: 2/span 2;
+    grid-row: 2/span 1; }
+
+.right__section-messages_container:last-child {
+  border-bottom: 1px solid #DBDBDB; }
