@@ -14,7 +14,7 @@
         <nav class="template__nav">
             <h1 class="text__2-alfaslab">Networkly</h1>
             <a href="home.html" class="template__nav-item text__5-montserrat_semibold">Home</a>
-            <a href="create-event.html"
+            <a href="events.html"
                 class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Events</a>
             <a href="career-up.html" class="template__nav-item template__nav-item text__5-montserrat_semibold">Career
                 Up</a>
@@ -62,19 +62,24 @@
                         </div>
                         <input type="text" placeholder="Search events">
                     </div> -->
-                    <img onclick="window.location.href = 'events.html'" class="main__events-header__backbtn"
-                        src="assets/icons/back.png" alt="">
+                    <!-- <img onclick="window.location.href = 'events.html'" class="main__events-header__backbtn"
+                        src="assets/icons/back.png" alt=""> -->
                     <!-- <button class="btn btn__large-green">CREATE POST</button> -->
+                    <div class="main__events-header__breadcrumb text__7-roboto_regular">
+                        <div><a class="hyperlink_breadcrumb" href="events.html">Events</a> / Create Event</div>
+                        <!-- <span class="text__7-roboto_regular">Create Event</span> -->
+                        <h2 class="text__2-roboto_bold">Create Event</h2>
+                    </div>
                     <a href="events.html" class="hyperlink_seemore text__7-roboto_regular ">Browse Events</a>
                 </div>
 
-                <div class="main__events-subheader2">
+                <!-- <div class="main__events-subheader2">
                     <div class="text__7-roboto_regular">
                         <a class="hyperlink_breadcrumb" href="events.html">Events</a> /
-                        <!-- <span class="text__7-roboto_regular">Create Event</span> -->
+                        <span class="text__7-roboto_regular">Create Event</span>
                     </div>
                     <h2 class="text__2-roboto_bold">Create Event</h2>
-                </div>
+                </div> -->
 
                 <form action="">
                     <div class="main__create_events">
@@ -90,26 +95,38 @@
                             </div>
                             <div>
                                 <label class="text__6-roboto_light" for="create_event_name">Event Name</label>
-                                <input id="create_event_name" type="text" required>
+                                <input class="text__7-roboto_medium" id="create_event_name" type="text" required>
                             </div>
                             <div>
                                 <label class="text__6-roboto_light" for="create_event_date">Date</label>
-                                <input id="create_event_date" type="text">
-                                <!-- <img src="" alt=""> -->
+                                <div class="main__create_events__middle__date">
+                                    <input class="text__7-roboto_medium" id="create_event_date" type="text"
+                                        placeholder="Select date from calendar" disabled>
+                                    <span><img src="assets/icons/calendar.png" alt=""></span>
+                                </div>
                             </div>
                             <div>
                                 <label class="text__6-roboto_light" for="create_event_location">Location</label>
-                                <input id="create_event_location" type="text">
+                                <select class="modal-content__form-input text__7-roboto_medium" name="country"
+                                    id="country">
+                                    <option value=""></option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="France">France</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Romania">Romania</option>
+                                </select>
                             </div>
                         </div>
                         <div class="main__create_events__right">
                             <div>
                                 <label class="text__6-roboto_light" for="create_event_description">Description</label>
-                                <textarea id="create_event_description" type="text"></textarea>
+                                <textarea class="text__7-roboto_medium" id="create_event_description"
+                                    type="text"></textarea>
                             </div>
                             <div>
                                 <label class="text__6-roboto_light" for="create_event_participants">Participants</label>
-                                <input id="create_event_participants" type="text">
+                                <input class="text__7-roboto_medium" id="create_event_participants" type="text">
                             </div>
                             <div>
                                 <button type="button">John Smith <span class="remove_participant">&#215;</span></button>

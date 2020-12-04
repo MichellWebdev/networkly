@@ -22,15 +22,55 @@
 
     &__middle {
         grid-area: middle;
+        color: $color-mediumbeige;
 
         img {
             width: 18vw;
         }
 
-        div {
+        > div {
             display: grid;
             margin: 20px;
             margin-bottom: 30px;
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        input,
+        select {
+            background-color: $color-lightbeige;
+            min-height: 4rem;
+            border: 1px solid $neutral-lightgrey;
+            border-radius: 0.5rem;
+            color: $color-mediumbeige;
+            padding: 0 1rem;
+        }
+
+        &__date {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            input {
+                width: 80%;
+            }
+
+            span {
+                width: 10%;
+                padding: 5px;
+                margin: auto;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            span:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -57,8 +97,6 @@
                 text-align: left;
             }
         }
-
-        
 
         div:last-of-type {
             display: flex;
