@@ -19,6 +19,22 @@ function displayChat() {
     chatContainer.classList.add("slideIn");
 }
 
+// FEEDBACK
+
+var successContainer = select(".main__status-success");
+var failContainer = select(".main__status-fail");
+
+failContainer.classList.add("fadeIn");
+
+setTimeout(() => {
+    failContainer.classList.add("fadeOut");
+    successContainer.classList.add("fadeIn");
+}, 2000);
+
+setTimeout(() => {
+    successContainer.classList.add("fadeOut");
+}, 4000);
+
 function select(s) {
-  return document.querySelector(s);
-}
+    return document.querySelector(s);
+  }

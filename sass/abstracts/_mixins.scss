@@ -17,10 +17,3 @@
     @content;
   }
 }
-
-//ladnscape mode on mobile and tablet -> display only the game
-@mixin landscape {
-  @media (max-width: 900px) and (orientation: landscape) {
-    @content;
-  }
-}

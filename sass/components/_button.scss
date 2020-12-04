@@ -75,6 +75,10 @@
       font-weight: 600;
       background-color: $color-darkgreen;
       color: white;
+
+      @include small-desk {
+        height: 4rem;
+      }
     }
   }
 }

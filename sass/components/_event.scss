@@ -1,8 +1,15 @@
 .article__event {
-    width: 22vw;
+    width: 21vw;
     border: 1px solid $color-lightbeige;
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 0 0.25rem;
+    margin-bottom: 0.5rem;
+
+    @include small-desk {  
+        width: 30vw;
+        margin: 0 0.5rem;
+        margin-bottom: 0.75rem;
+    }
 
     &-image {
         width: 100%;
@@ -54,14 +61,16 @@
     &-success,&-fail  {
         padding: 1rem;
         display: flex;
-        align-items: center;
+        opacity: 0;
+        position: absolute;
+        align-items: center;  
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: nowrap; 
         color: $color-darkgreen;
 
         img {
             width: $universal-icon-size;
-            height: $universal-icon-size;
+            height: $universal-icon-size;  
         }
 
         p {

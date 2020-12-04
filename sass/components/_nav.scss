@@ -11,6 +11,10 @@
         color: $neutral-darkblack;
         text-decoration: none;
 
+        @include small-desk {  
+            margin: 1.5rem;
+        }
+
         &_active {
             position: relative;
 

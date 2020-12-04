@@ -22,6 +22,10 @@ input::placeholder {
         align-items: center;
         padding: 1rem;
 
+        @include small-desk {
+            height: 4rem;
+          }
+
         img {
             width: $universal-icon-size; 
         }
@@ -42,6 +46,10 @@ input::placeholder {
 
         &::placeholder {
             color: $neutral-mediumgrey2;
+        }
+
+        @include small-desk {
+            height: 4rem;
         }
     }
 } 
