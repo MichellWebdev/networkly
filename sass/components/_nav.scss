@@ -6,6 +6,25 @@
     justify-content: flex-start;
     align-items: center;
 
+    .burger-menu {
+        display: none;
+        
+        @include phone {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background-image: url("/assets/icons/menu.png");
+            background-size: contain;  
+            margin-right: 2rem;  
+            position: absolute;
+            right: 0;
+        }
+         
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &-item {
         margin: 3rem;
         color: $neutral-darkblack;

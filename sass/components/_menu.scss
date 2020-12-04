@@ -1,0 +1,36 @@
+.right__section-menu {
+    display: none;
+
+    @include phone {
+        margin-bottom: 1px solid $color-lightbeige;  
+        display: block;
+
+        a {
+            display: block;
+            padding: 1.5rem 3rem;
+            color: $neutral-darkblack;
+            text-decoration: none;
+        }
+
+        a:last-of-type {
+            border-bottom: 1px solid $neutral-lightgrey;            
+        }
+
+        &-item_active {
+            background-color: $color-lightpink;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: $color-mediumpink;
+            }
+        }
+
+        
+    }
+}

@@ -51,5 +51,9 @@ input::placeholder {
         @include small-desk {
             height: 4rem;
         }
+
+        @include phone {
+            width: 95%;
+        }
     }
 } 

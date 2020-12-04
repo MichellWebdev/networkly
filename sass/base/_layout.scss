@@ -14,6 +14,10 @@
     &__nav {
         height: 7.5rem;
         width: 100%;
+
+        @include phone {
+            grid-column: 1/span 2;
+        }
     }
 
     &__section {
@@ -21,10 +25,21 @@
         z-index: 3;
         width: 100%;
         height: 100vh;
+
+        @include phone {
+            width: 90%;
+            right: 0;
+            position: absolute;
+            background-color: white;
+            display: none;
+        }
     }
 
     &__main {
         overflow: scroll;
+        @include phone {
+            grid-column: 1/span 2;
+        }
         
         &::-webkit-scrollbar {
             display: none;
@@ -44,6 +59,7 @@
                 margin: 1rem;
                 width: calc(100% - 2rem);
             }
+
         }
 
         &-container_career {

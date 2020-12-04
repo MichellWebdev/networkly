@@ -37,4 +37,17 @@ setTimeout(() => {
 
 function select(s) {
     return document.querySelector(s);
-  }
+}
+
+// MOBILE MENU
+
+function closeMenu() {
+    select('.template__section').classList.remove("slideIn");
+    select('.template__section').classList.add("slideOut");
+}
+
+function openMenu() {
+    select('.template__section').classList.remove("slideOut");
+    select('.template__section').style.display = "block";    
+    select('.template__section').classList.add("slideIn");
+}

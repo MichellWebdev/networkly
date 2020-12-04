@@ -53,10 +53,20 @@
             p {
                 text-align: center;
             }
+
+            &:last-child {
+                @include phone {
+                    display: none;
+                }
+            }
         }
 
         &_paragraph {
             margin: 1rem 0;
+
+            @include phone {
+                display: none;
+            }
         }
     }
 
