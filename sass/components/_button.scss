@@ -91,7 +91,6 @@
 }
 
 .tag {
-
   width: auto;
   padding: 0.5rem 1rem;
   border: 0;
@@ -104,5 +103,12 @@
   &_post {
     background-color: $color-lightviolet;
     color: $color-mediumviolet;
+  }
+
+  &_attendees {
+    background-color: $color-darkbeige;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
   }
 }
