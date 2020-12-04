@@ -8,8 +8,8 @@
 
     display: grid;
     grid-template: 
-    "image header info actions" 100px
-    "image content info actions" 120px
+    "image header info actions" 45px
+    "image content info actions" 190px
     / minmax(20%, 350px) auto 50px 50px;
 
     &-image {
@@ -19,18 +19,12 @@
         align-items: flex-start;
         position: relative;
         // height: 100%;
-        z-index: 0;
 
         img {
             width: 100%;
-            height: 220px;
+            height: auto;
             border-top-left-radius: 1rem;
             border-bottom-left-radius: 1rem;
-            
-            @include small-desk {
-                height: 100%;
-                width: auto;
-            }
         }
 
         &_date{
@@ -44,48 +38,13 @@
             color: white;
             padding: 5%;
             border-bottom-left-radius: 1rem;
-            
-            &_author2 {
-                display: none;
-            }
-
-            @include small-desk {
-                top: 80%;
-            }
-
-            @include tablet {
-                top: 70%;
-                height: 30%;
-                font-size: 1.5rem;
-                padding-bottom: 10px;
-
-                &_author2 {
-                    display: flex;
-                    float: right;
-                }
-            }
-
-            @include phone {
-                top: 80%;
-                height: 30%;
-                font-size: 1.8rem;
-
-                &_author2 {
-                    display: flex;
-                    float: right;
-                }
-            }
         }
     }
 
     &-header {
         grid-area: header;
         padding: 20px;
-
-        width: 100%;
-        background-color: white;
-        z-index: 1; 
-
+        
         h3 {
             font-size: 1.3vw;
         }
@@ -95,9 +54,6 @@
             color: darken($color:$neutral-mediumgrey2, $amount: 20);
             padding: 10px 0;
             align-items: center;
-            
-            background-color: white;
-            z-index: 1; 
 
             &-author {
                 float: left;
@@ -120,12 +76,9 @@
     &-content {
         grid-area: content;
         padding: 20px;
-        // margin-top: 60px;
+        margin-top: 60px;
         padding-bottom: 0;
-        
-        background-color: white;
-        z-index: 1; 
-
+    
         columns: 40px 2;
         width: 95%;
         height: 100%;
@@ -136,7 +89,7 @@
 
     &-info {
         grid-area: info;
-        
+    
         width: 50%;
         height: 50%;
         display: grid;
@@ -247,7 +200,7 @@
         grid-template: 
         "tablet-image" 150px
         "tablet-header" minmax(80px, 100px)
-        "tablet-content" auto
+        "tablet-content" 330px
         / 1fr;
 
         float: left;
@@ -262,9 +215,7 @@
             z-index: 0;
 
             img {
-                // height: 200px;
-                width: 100%;
-                height: auto;
+                height: 200px;
                 border: none;
                 float: center;
                 border-top-left-radius: 1rem;
@@ -272,9 +223,9 @@
                 border-bottom-left-radius: 0;
             }
 
-            // &_date{
-            //     display: none;
-            // }
+            &_date{
+                display: none;
+            }
         }
 
         &-header {
@@ -313,11 +264,11 @@
             grid-area: tablet-content;
             font-size: 2.2vw;
             margin: 0;
-            background-color: transparent;
 
             padding: 20px;
             padding-left: 30px;
             margin-top: 20px;
+            padding-bottom: 0;
             
             columns: 60px 1;
             text-align: justify;
@@ -363,7 +314,6 @@
         margin: 20px auto;
         margin-right: 20px;
         margin-bottom: 20px;
-        margin-left: 20px;
         
         border: 1px solid $color-lightbeige;
         border-radius: 1rem;
@@ -371,7 +321,7 @@
         display: grid;
         grid-template: 
         "phone-image" auto
-        "phone-header" auto
+        "phone-header" minmax(80px, 100px)
         // "phone-content" minmax(100px, 150px)
         / 1fr;
 
@@ -385,7 +335,7 @@
             img {
                 // height: 150px;
                 height: auto;
-                max-width: 100%;
+                max-width: 80vw;
                 border: none;
                 float: center;
                 border-top-left-radius: 1rem;
@@ -393,9 +343,9 @@
                 border-bottom-left-radius: 0;
             }
 
-            // &_date{
-            //     display: none;
-            // }
+            &_date{
+                display: none;
+            }
         }
 
         &-header {
