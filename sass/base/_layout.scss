@@ -117,15 +117,8 @@
     &-header,
     &-subheader {
 
-        &__backbtn {
-            height: 50px;
-            fill: $color-darkgreen; 
-        }
-
-        &__backbtn:hover {
-            cursor: pointer;
-            border-radius: 5rem;
-            background-color: $color-lightgreen;
+        &__breadcrumb {
+            display: grid;
         }
 
         @include tablet {

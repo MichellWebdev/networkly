@@ -3,6 +3,7 @@
     width: 50vw;
     // margin: 0 auto;
     margin-top: 5vh;
+    margin-bottom: 8vh;
 
     display: grid;
     // grid-gap: 3rem;
@@ -17,6 +18,11 @@
 
         div {
             margin-bottom: 10px;
+        }
+
+        &__upload:hover,
+        &__remove:hover {
+            cursor: pointer;
         }
     }
 
@@ -58,6 +64,15 @@
                 width: 80%;
             }
 
+            input[data-readonly] {
+                pointer-events: none;
+              }
+
+            // input::placeholder{
+            //     font-weight: 200;
+            //     color: $neutral-mediumgrey;
+            // }
+
             span {
                 width: 10%;
                 padding: 5px;
@@ -66,10 +81,10 @@
                 img {
                     width: 30px;
                 }
-            }
 
-            span:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -77,35 +92,90 @@
     &__right {
         grid-area: right;
         margin-left: 5rem;
+        color: $color-mediumbeige;
 
-        div {
+        > div {
             display: grid;
             margin: 20px;
             margin-bottom: 30px;
         }
 
-        div:nth-of-type(2) {
+        > div:nth-of-type(2) {
             margin-bottom: 10px;
         }
 
-        div:nth-of-type(3) {
+        > div:nth-of-type(3) {
             min-height: 10vh;
-            // display: none;
-            border: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 20px;
 
             button {
-                text-align: left;
+                width: fit-content;
+                text-align: center;
+                padding: 5px 10px;
+                margin-right: 5px;
+
+                span{
+                    margin-left: 10px;
+                    float: right;
+                }
             }
         }
 
-        div:last-of-type {
+        > div:last-of-type {
             display: flex;
             align-items: center;
             // width: 100%;
             
-            button {
-                padding: 10px;
+            > button {
+                padding: 10px 20px;
                 margin: 0 auto;
+            }
+        }
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            background-color: $color-lightbeige;
+            min-height: 4rem;
+            border: 1px solid $neutral-lightgrey;
+            border-radius: 0.5rem;
+            color: $color-mediumbeige;
+            padding: 0 1rem;
+        }
+
+        textarea {
+            min-height: 10rem;
+            padding: 1rem;
+        }
+
+        &__attendees {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            input {
+                width: 80%;
+            }
+
+            button {
+                color: $color-mediumbeige;
+                width: 15%;
+                padding: 10px 5px;
+                margin: auto;
+                background: white;
+                border: none;
+                // border-radius: 1rem;
+            }
+
+            button:hover {
+                cursor: pointer;
             }
         }
     }

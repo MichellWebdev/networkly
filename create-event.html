@@ -56,18 +56,8 @@
 
             <section class="template__main-container">
                 <div class="main__events-header">
-                    <!-- <div class="main__search">
-                        <div class="main__search-image">
-                            <img src="assets/icons/search.png" alt="">
-                        </div>
-                        <input type="text" placeholder="Search events">
-                    </div> -->
-                    <!-- <img onclick="window.location.href = 'events.html'" class="main__events-header__backbtn"
-                        src="assets/icons/back.png" alt=""> -->
-                    <!-- <button class="btn btn__large-green">CREATE POST</button> -->
                     <div class="main__events-header__breadcrumb text__7-roboto_regular">
                         <div><a class="hyperlink_breadcrumb" href="events.html">Events</a> / Create Event</div>
-                        <!-- <span class="text__7-roboto_regular">Create Event</span> -->
                         <h2 class="text__2-roboto_bold">Create Event</h2>
                     </div>
                     <a href="events.html" class="hyperlink_seemore text__7-roboto_regular ">Browse Events</a>
@@ -84,8 +74,8 @@
                 <form action="">
                     <div class="main__create_events">
                         <div class="main__create_events__left">
-                            <div class="text__6-roboto_medium">Upload photo</div>
-                            <div class="text__6-roboto_light">Remove</div>
+                            <div class="main__create_events__left__upload text__6-roboto_medium">Upload photo</div>
+                            <div class="main__create_events__left__remove text__6-roboto_light">Remove</div>
                         </div>
                         <div class="main__create_events__middle">
                             <div>
@@ -94,21 +84,22 @@
                                 <!-- src="assets/images/create_event_placeholder.jpg" -->
                             </div>
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_name">Event Name</label>
+                                <label class="text__6-roboto_light" for="create_event_name">Event Name *</label>
                                 <input class="text__7-roboto_medium" id="create_event_name" type="text" required>
                             </div>
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_date">Date</label>
+                                <label class="text__6-roboto_light" for="create_event_date">Date *</label>
                                 <div class="main__create_events__middle__date">
-                                    <input class="text__7-roboto_medium" id="create_event_date" type="text"
-                                        placeholder="Select date from calendar" disabled>
-                                    <span><img src="assets/icons/calendar.png" alt=""></span>
+                                    <!-- https://codepen.io/fxm90/pen/zGogwV -->
+                                    <input class="text__7-roboto_medium" id="create_event_date" type="text" required
+                                        data-readonly>
+                                    <span><img onclick="populateDate()" src="assets/icons/calendar.png" alt=""></span>
                                 </div>
                             </div>
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_location">Location</label>
+                                <label class="text__6-roboto_light" for="create_event_location">Location *</label>
                                 <select class="modal-content__form-input text__7-roboto_medium" name="country"
-                                    id="country">
+                                    id="country" required>
                                     <option value=""></option>
                                     <option value="Denmark">Denmark</option>
                                     <option value="France">France</option>
@@ -120,17 +111,19 @@
                         </div>
                         <div class="main__create_events__right">
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_description">Description</label>
-                                <textarea class="text__7-roboto_medium" id="create_event_description"
-                                    type="text"></textarea>
+                                <label class="text__6-roboto_light" for="create_event_description">Description *</label>
+                                <textarea class="text__7-roboto_medium" id="create_event_description" type="text"
+                                    required></textarea>
                             </div>
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_participants">Participants</label>
-                                <input class="text__7-roboto_medium" id="create_event_participants" type="text">
+                                <label class="text__6-roboto_light" for="create_event_participants">Attendees</label>
+                                <!-- <input class="text__7-roboto_medium" id="create_event_participants" type="text"> -->
+                                <div class="main__create_events__right__attendees">
+                                    <input class="text__7-roboto_medium" id="attendees" type="text">
+                                    <button onclick="addAtendees()" type="button">+ Add</button>
+                                </div>
                             </div>
-                            <div>
-                                <button type="button">John Smith <span class="remove_participant">&#215;</span></button>
-                                <button type="button">John Smith <span class="remove_participant">&#215;</span></button>
+                            <div id="atendee_div">
                             </div>
                             <div>
                                 <button type="button" class="btn btn__medium-white"
@@ -146,6 +139,7 @@
         </main>
     </div>
 
+    <script src="js/event.js"></script>
 </body>
 
 </html>
