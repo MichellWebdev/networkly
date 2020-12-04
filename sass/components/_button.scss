@@ -15,11 +15,29 @@
     }
 
     &-event {
-      width: 10rem;
+      width: 13rem;
       height: 3.5rem;
       background-color: $color-mediumgreen;
       color: white;
       font-weight: 600;
+      margin-left: calc(50% - 6.5rem);
+      margin-bottom: 2rem;
+
+      &::before {
+        content: 'SAVE';
+        margin-left: -1.5rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.75rem;
+        background-image: url("../assets/icons/save.png");
+        background-size: contain;
+      }
+
     }
   }
 
