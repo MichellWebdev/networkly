@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="right__section-messages_container">
-                        <article class="article__message">
+                        <article class="article__message" onclick="displayChat()">
                             <div class="article__message-image" >
                                 <div class="article__message-image_active"></div>
                                 <img src="assets/images/user_msg-placeholder1.jpg" alt="">
@@ -51,7 +51,7 @@
                             <p class="article__message-date text__7-roboto_light">October 11</p>
                             <p class="article__message-text text__7-roboto_light">Vivamus fringilla ligula lorem, in egestas est ornare id. Nulla commodo maximus mauris vitae interdum.</p>
                         </article>
-                        <article class="article__message">
+                        <article class="article__message" onclick="displayChat()">
                             <div class="article__message-image" >
                                 <img src="assets/images/user_msg-placeholder2.jpg" alt="">
                             </div>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="right__section-chat">
                     <div class="right__section-chat_user">
-                        <img src="assets/icons/left-arrow.png" alt="">
+                        <img onclick="displayOverview()" src="assets/icons/left-arrow.png" alt="">
                         <div>
                             <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
                             <p class="text__7-roboto_medium">Student at KEA</p>
@@ -263,6 +263,7 @@
         </main>
     </div>
 
+    <script src="js/messaging.js"></script>
 </body>
 
 </html>
