@@ -54,6 +54,10 @@
        .main__search {
            margin: 1rem 0;
            margin-left: calc(50% - 9vw);
+           
+           @include tablet {
+                margin-left: calc(50% - 15vw);
+           }
           
        }
     }
@@ -156,6 +160,10 @@
                 display: flex;
                 margin: 1rem 2.5rem;
                 
+                @include tablet {
+                    margin: 1rem;
+                }
+
                 img {
                     width: 5rem;
                     height: 5rem;
@@ -173,6 +181,10 @@
                     width: 80%;
                     color: white;
                     border-radius: 1rem;
+
+                    @include tablet {
+                        width: 95%;
+                    }
                 }
 
                 p:last-of-type {
@@ -187,6 +199,10 @@
                 * {
                     float: right;
                     margin-right: 2.5rem;
+
+                    @include tablet {
+                        margin-right: 2rem;
+                    }
                 }
 
                 p:first-of-type {
@@ -195,6 +211,10 @@
                     width: 60%;
                     color: white;
                     border-radius: 1rem;
+                    
+                    @include tablet {
+                        width: 75%;
+                    }
                 }
 
                 p:last-of-type {

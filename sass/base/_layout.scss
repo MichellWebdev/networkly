@@ -5,7 +5,11 @@
 
     @include small-desk {  
        grid-template-columns: 10fr 5fr;
-    } 
+    }   
+
+    @include tablet {  
+        grid-template-columns: 7fr 5fr;  
+    }
 
     &__nav {
         height: 7.5rem;
@@ -83,6 +87,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+
+        @include tablet {
+            margin: 2rem 0;
+        }
     }
 
     &-header {
@@ -95,13 +103,17 @@
 
         &__backbtn {
             height: 50px;
-            fill: $color-darkgreen;
+            fill: $color-darkgreen; 
         }
 
         &__backbtn:hover {
             cursor: pointer;
             border-radius: 5rem;
             background-color: $color-lightgreen;
+        }
+
+        @include tablet {
+            display: flex !important; 
         }
 
         display: flex;
@@ -115,7 +127,8 @@
         
         &_events, &_career {
             @include small-desk {
-                display: block;
+                display: flex;
+                justify-content: space-between;
             }
         }
 
@@ -142,6 +155,10 @@
 
             @include tablet {
                 display: block; 
+
+                li {
+                    border-radius: 1rem; 
+                }
             }
         }
 

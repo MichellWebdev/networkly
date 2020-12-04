@@ -79,6 +79,13 @@
       @include small-desk {
         height: 4rem;
       }
+
+      @include tablet {  
+        height: 4rem;
+        font-size: 1.4rem;
+        max-width: 16rem;
+        min-width: 14rem;
+    }
     }
   }
 }
