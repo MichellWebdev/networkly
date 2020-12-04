@@ -434,6 +434,29 @@ body {
     .article__event-content_paragraph {
       margin: 1rem 0; }
 
+.main__status-success, .main__status-fail {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  color: #43736C; }
+  .main__status-success img, .main__status-fail img {
+    width: 2.5rem;
+    height: 2.5rem; }
+  .main__status-success p, .main__status-fail p {
+    margin-left: 1rem; }
+
+.main__status-success {
+  color: #43736C;
+  border: 1px solid #43736C;
+  background-color: #D4ECE8; }
+
+.main__status-fail {
+  color: #E5134B;
+  border: 1px solid #E5134B;
+  background-color: #FFE7ED; }
+
 input::placeholder {
   font-size: 1.8rem; }
 

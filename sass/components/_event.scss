@@ -49,3 +49,36 @@
     }
 
 }
+
+.main__status {
+    &-success,&-fail  {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        color: $color-darkgreen;
+
+        img {
+            width: $universal-icon-size;
+            height: $universal-icon-size;
+        }
+
+        p {
+            margin-left: 1rem;
+        }
+    }
+
+    &-success {
+        color: $color-darkgreen;
+        border: 1px solid  $color-darkgreen;
+        background-color: $color-lightgreen;
+    }
+
+    &-fail {
+        color: $color-mediumpink;
+        border: 1px solid $color-mediumpink;
+        background-color: $color-lightpink;
+    }
+
+}
