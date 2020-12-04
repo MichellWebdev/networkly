@@ -18,10 +18,12 @@
                 class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Events</a>
             <a href="career-up.html" class="template__nav-item text__5-montserrat_semibold">Career Up</a>
             <a href="/" class="template__nav-item text__5-montserrat_semibold">Jobs & Companies</a>
+            <div onclick="openMenu()" class="burger-menu"></div>
         </nav>
 
         <section class="template__section">
             <div class="right__section-user">
+                <div onclick="closeMenu()" class="burger-menu"></div>
                 <img src="assets/images/user_placeholder.png" alt="">
                 <h4 class="text__6-roboto_medium">John Lennon</h4>
                 <button onclick="window.location.href = 'index.html'" class="btn btn__small-dark">LOGOUT</button>
@@ -31,19 +33,89 @@
                     Messages</h4>
                 <h4 class="right__section-navigation_item text__4-roboto_regular">Profile</h4>
             </div>
-            <div class="right__section-search">
-                <div class="main__search">
-                    <div class="main__search-image">
-                        <img src="assets/icons/search.png" alt="">
+            <div class="right__section-container">
+                <div class="right__section-menu">
+                    <a href="home.html" class="right__section-menu-item text__5-montserrat_semibold">Home</a>
+                    <a href="events.html"
+                    class="right__section-menu-item right__section-menu-item_active text__5-montserrat_semibold">Events</a>
+                    <a href="career-up.html" class="right__section-menu-item text__5-montserrat_semibold">Career Up</a>
+                    <a href="/" class="right__section-menu-item text__5-montserrat_semibold">Jobs & Companies</a>
+                </div>  
+                <div class="right__section-overview">
+                    <div class="right__section-search">
+                        <div class="main__search">
+                            <div class="main__search-image">
+                                <img src="assets/icons/search.png" alt="">
+                            </div>
+                            <input type="text" placeholder="Search users">
+                        </div>
                     </div>
-                    <input type="text" placeholder="Search users">
+                    <div class="right__section-messages_container">
+                        <article class="article__message" onclick="displayChat()">
+                            <div class="article__message-image" >
+                                <div class="article__message-image_active"></div>
+                                <img src="assets/images/user_msg-placeholder1.jpg" alt="">
+                            </div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="article__message-date text__7-roboto_light">October 11</p>
+                            <p class="article__message-text text__7-roboto_light">Vivamus fringilla ligula lorem, in egestas est ornare id. Nulla commodo maximus mauris vitae interdum.</p>
+                        </article>
+                        <article class="article__message" onclick="displayChat()">
+                            <div class="article__message-image" >
+                                <img src="assets/images/user_msg-placeholder2.jpg" alt="">
+                            </div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="article__message-date text__7-roboto_light">October 11</p>
+                            <p class="article__message-text text__7-roboto_light">Vivamus fringilla ligula lorem, in egestas est ornare id. Nulla commodo maximus mauris vitae interdum.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="right__section-chat">
+                    <div class="right__section-chat_user">
+                        <img onclick="displayOverview()" src="assets/icons/left-arrow.png" alt="">
+                        <div>
+                            <p class="article__message-user text__6-roboto_medium">Elisabeth Grundall</p>
+                            <p class="text__7-roboto_medium">Student at KEA</p>
+                        </div>
+                    </div>
+                    <div class="right__section-chat_display">
+                        <div class="message-from">
+                            <img src="assets/images/user_msg-placeholder1.jpg" alt="">
+                            <div>
+                                <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare id. </p>
+                                <p class="text__7-roboto_light">14 October 2020 20:59</p>
+                            </div>
+                        </div>
+                        <div class="message-to">
+                            <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare id. </p>
+                            <p class="text__7-roboto_light">14 October 2020 20:59</p>
+                        </div>
+                    </div>
+                    <div class="right__section-chat_write">
+                        <div  class="right__section-chat_write-adjust">
+                            <div class="write__actions">
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/happy.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/camera.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/gif.png" alt="">
+                                </div>
+                                <div class="write__actions-action">
+                                    <img src="assets/icons/add.png" alt="">
+                                </div>
+                            </div>
+                            <div class="write__type">
+                                <textarea></textarea>
+                                <button class="btn btn__small-dark">SEND</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="right__section-messages_container">
-                <article class="article__message">
 
-                </article>
-            </div>
         </section>
 
         <main class="template__main">
@@ -56,11 +128,19 @@
                         </div>
                         <input type="text" placeholder="Search events">
                     </div>
+                    <div class="main__status-success">
+                        <img src="assets/icons/success.png" alt="">
+                        <p class="text__7-roboto_medium">Event created successfully!</p>
+                    </div>
+                    <div class="main__status-fail">
+                        <img src="assets/icons/fail.png" alt="">
+                        <p class="text__7-roboto_medium">Event creation failed.</p>
+                    </div>
                     <button onclick="window.location.href = 'create-event.html'" class="btn btn__large-green">CREATE
                         EVENT</button>
                 </div>
 
-                <div class="main__events-subheader">
+                <div class="main__events-subheader_events">
                     <h2 class="text__2-roboto_bold">All Events ( 254 )</h2>
                     <ul class="main__events-filters">
                         <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-active">
@@ -85,6 +165,11 @@
                             Popular
                         </li>
                     </ul>
+                    <ul class="main__events-filters_tablet">
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Filters
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="main__events-container">
@@ -92,31 +177,99 @@
                         <div class="article__event-image"></div>
                         <div class="article__event-content">
                             <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
-                            <div class="article__event-content_metadata">
-                                <img class="article__event-content_metadata-icon"
-                                    src="assets/icons/participants-turqoise.png" alt="">
-                                <p class="text__8-roboto_medium">1424 Participants</p>
+                            <div class="article__event-content_data">
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/participants-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">1424 Attendees</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/calendar-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/location-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">CPH, Denmark</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/connection-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">Seminar</p>
+                                </div>
                             </div>
-                            <div class="article__event-content_metadata">
-                                <img class="article__event-content_metadata-icon"
-                                    src="assets/icons/calendar-turqoise.png" alt="">
-                                <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
-                            </div>
-                            <div class="article__event-content_metadata">
-                                <img class="article__event-content_metadata-icon"
-                                    src="assets/icons/location-turqoise.png" alt="">
-                                <p class="text__8-roboto_medium">CPH, Denmark</p>
-                            </div>
-                            <div class="article__event-content_metadata">
-                                <img class="article__event-content_metadata-icon"
-                                    src="assets/icons/connection-turqoise.png" alt="">
-                                <p class="text__8-roboto_medium">Seminar</p>
-                            </div>
-                            <p class="article__event-content_paragraph text__5-montserrat_light">Sed ut perspiciatis
+                            <p class="article__event-content_paragraph text__6-montserrat_light">Sed ut perspiciatis
                                 unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
                                 aperiam, eaque ipsa...</p>
                         </div>
-                        <button class="btn btn__small-event">SAVE</button>
+                        <button class="btn btn__small-event"></button>
+                    </article>
+
+                    <article class="article__event">
+                        <div class="article__event-image"></div>
+                        <div class="article__event-content">
+                            <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
+                            <div class="article__event-content_data">
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/participants-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">1424 Attendees</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/calendar-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/location-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">CPH, Denmark</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/connection-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">Seminar</p>
+                                </div>
+                            </div>
+                            <p class="article__event-content_paragraph text__6-montserrat_light">Sed ut perspiciatis
+                                unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                                aperiam, eaque ipsa...</p>
+                        </div>
+                        <button class="btn btn__small-event"></button>
+                    </article>
+
+                    <article class="article__event">
+                        <div class="article__event-image"></div>
+                        <div class="article__event-content">
+                            <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
+                            <div class="article__event-content_data">
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/participants-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">1424 Attendees</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/calendar-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/location-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">CPH, Denmark</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/connection-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">Seminar</p>
+                                </div>
+                            </div>
+                            <p class="article__event-content_paragraph text__6-montserrat_light">Sed ut perspiciatis
+                                unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                                aperiam, eaque ipsa...</p>
+                        </div>
+                        <button class="btn btn__small-event"></button>
                     </article>
                 </div>
             </section>
@@ -124,6 +277,7 @@
         </main>
     </div>
 
+    <script src="js/messaging.js"></script>
 </body>
 
 </html>

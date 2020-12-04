@@ -22,7 +22,8 @@
       font-weight: 600;
       margin-left: calc(50% - 6.5rem);
       margin-bottom: 2rem;
-
+      position: relative
+      ;
       &::before {
         content: 'SAVE';
         margin-left: -1.5rem;
@@ -70,10 +71,21 @@
       max-width: 20rem;
       min-width: 18rem;
       height: 4.5rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 600;
       background-color: $color-darkgreen;
       color: white;
+
+      @include small-desk {
+        height: 4rem;
+      }
+
+      @include tablet {  
+        height: 4rem;
+        font-size: 1.4rem;
+        max-width: 16rem;
+        min-width: 14rem;
+    }
     }
   }
 }

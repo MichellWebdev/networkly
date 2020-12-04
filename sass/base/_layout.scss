@@ -1,11 +1,23 @@
 .template {
     display: grid;
-    grid-template-columns: 10fr 3fr;
+    grid-template-columns: 10fr 3.75fr;
     grid-template-rows: 7.5rem calc(100vh - 7.5rem);
+
+    @include small-desk {  
+       grid-template-columns: 10fr 5fr;
+    }   
+
+    @include tablet {  
+        grid-template-columns: 7fr 5fr;  
+    }
 
     &__nav {
         height: 7.5rem;
         width: 100%;
+
+        @include phone {
+            grid-column: 1/span 2;
+        }
     }
 
     &__section {
@@ -13,10 +25,21 @@
         z-index: 3;
         width: 100%;
         height: 100vh;
+
+        @include phone {
+            width: 90%;
+            right: 0;
+            position: absolute;
+            background-color: white;
+            display: none;
+        }
     }
 
     &__main {
         overflow: scroll;
+        @include phone {
+            grid-column: 1/span 2;
+        }
         
         &::-webkit-scrollbar {
             display: none;
@@ -30,27 +53,104 @@
             background-color: white;
             width: calc(100% - 5rem);
             display: inline-block;
+            border: 1px solid $neutral-lightgrey40;
+
+            @include small-desk {
+                margin: 1rem;
+                width: calc(100% - 2rem);
+            }
+
+        }
+
+        &-container_career {
+            padding: 2rem;
+            margin: 0.5rem 2.5rem;
+            margin-right: 1.75rem;
+            background-color: white;
+            width: calc(50% - 5rem);
+            display: inline-block;
+            border: 1px solid $neutral-lightgrey40;
+
+            @include small-desk {
+                margin: 1rem;
+                width: calc(50% - 2rem);
+            }
+        }
+
+        &-container_jobs {
+            padding: 2rem;
+            margin: 0.5rem 2.5rem;
+            background-color: white;
+            width: calc(50% - 5rem);
+            display: inline-block;
+            border: 1px solid $neutral-lightgrey40;
+
+            @include small-desk {
+                margin: 1rem;
+                width: calc(50% - 2.5rem);
+            }
         }
     }
 }
 
 .main__events,
 .main__create_events,
-.main__posts {
+.main__posts,
+.main__career,
+.main__jobs {
+
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        @include tablet {
+            margin: 2rem 0;
+        }
+    }
+
+    &-header {
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
     &-header,
     &-subheader {
 
-        &__breadcrumb {
-            display: grid;
+        &__backbtn {
+            height: 50px;
+            fill: $color-darkgreen; 
+        }
+
+        &__backbtn:hover {
+            cursor: pointer;
+            border-radius: 5rem;
+            background-color: $color-lightgreen;
+        }
+
+        @include tablet {
+            display: flex !important; 
         }
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &-subheader {
-        margin: 2rem 0;
-        // display: grid;
+        margin: 1rem 0;
+        margin-bottom: 2rem;
+        
+        &_events, &_career {
+            @include small-desk {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        a {
+            color: $color-darkpink;
+        }
     }
 
     &-subheader2 {
@@ -58,9 +158,29 @@
         display: grid;
     }
 
-    &-filters {
+    &-filters {  
         list-style-type: none;
         color: $color-darkgreen;
+
+        @include tablet {
+            display: none; 
+        }
+
+        &_tablet {
+            display: none;
+
+            @include tablet {
+                display: block; 
+
+                li {
+                    border-radius: 1rem; 
+                }
+            }
+        }
+
+        // @include small-desk {
+            margin: 1.5rem 0;
+        // }
 
         li:nth-of-type(1) {
             border-top-left-radius: 1rem;
