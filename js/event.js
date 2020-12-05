@@ -2,7 +2,16 @@ var click = 0;
 var divNum = 1;
 var randNames = ['John Smith', 'Jane Doe', 'Selena Diaz', 'Florian Rau', 'Lorine Metz', 'Rowland Price', 'Alberto Strosin'];
 var cancelModal = document.getElementById('cancelModal');
+var newEvent = document.getElementById('newEvent')
 // var cancelModal = document.getElementById('cover');
+
+// setTimeout(() => {
+//     newEvent.style.border = '1px solid #43736C'
+// }, 1000);
+
+// setTimeout(() => {
+//     newEvent.style.border = '1px solid #F8F3F0'
+// }, 2000);
 
 function populateDate() {
     document.getElementById('create_event_date').value = "24 - 25, March, 2021"
