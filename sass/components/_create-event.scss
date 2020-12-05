@@ -273,7 +273,10 @@
             display: flex;
             align-items: center;
             // width: 100%;
-            
+            height: auto;
+            margin: 20px;
+            margin-bottom: 30px;
+
             @include small-desk {
                 // padding: 0;
 
@@ -284,11 +287,15 @@
                 padding: 0;
                 margin: 0;
                 width: 100%;
-
+                // height: 300px;
+                
                 > button {
                     height: 6rem;
-                    max-width: 300px;
+                    max-width: 400px;   
+                    width: 25vw;
                     font-size: 1.5rem;
+                    padding-bottom: 30px;
+                    padding: 30px 30px;
                 }
             }
 
@@ -300,6 +307,7 @@
                 > button {
                     height: 6rem;
                     max-width: 300px;
+                    width: 22vw;
                     font-size: 1.5rem;
                 }
             }
@@ -312,6 +320,7 @@
                 > button {
                     height: 6rem;
                     max-width: 300px;
+                    width: 40vw;
                     font-size: 1.5rem;
                 }
             }

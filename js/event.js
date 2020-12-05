@@ -2,6 +2,7 @@ var click = 0;
 var divNum = 1;
 var randNames = ['John Smith', 'Jane Doe', 'Selena Diaz', 'Florian Rau', 'Lorine Metz', 'Rowland Price', 'Alberto Strosin'];
 var cancelModal = document.getElementById('cancelModal');
+// var cancelModal = document.getElementById('cover');
 
 function populateDate() {
     document.getElementById('create_event_date').value = "March 4th, 2021"
@@ -41,4 +42,8 @@ function addAtendees() {
 
 function displayCancelModal() {
     cancelModal.style.display = 'block';
+}
+
+function closeCancelModal() {
+    cancelModal.style.display = 'none';
 }
