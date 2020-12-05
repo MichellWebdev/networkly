@@ -9,9 +9,40 @@
     // grid-gap: 3rem;
     grid-template: 
     "left middle right" auto
-    / 17vw 20vw 25vw;
+    / 15vw 20vw 25vw;
 
-    &__left {        
+    @include tablet {
+
+        // width: 90vw;
+        grid-template: 
+        "middle" auto
+        "left2" auto
+        "right" auto
+        / 1fr;
+
+        &__left {
+            display: none;
+        }
+    }
+
+    @include phone {
+        width: 90vw;
+        grid-template: 
+        "middle" auto
+        "left2" auto
+        "right" auto
+        / 1fr;
+
+        &__left {
+            display: none;
+        }
+
+        input {
+            min-height: 6rem;
+        }
+    }
+
+    &__left { 
         grid-area: left;
         text-align: right;
         margin-top: 80px;
@@ -32,9 +63,20 @@
 
         img {
             width: 18vw;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            @include phone {
+                width: 100%;
+            }
         }
 
-        > div {
+        > div:nth-of-type(1),
+        > div:nth-of-type(3),
+        > div:nth-of-type(4),
+        > div:nth-of-type(5) {
             display: grid;
             margin: 20px;
             margin-bottom: 30px;
@@ -52,6 +94,15 @@
             border-radius: 0.5rem;
             color: $color-mediumbeige;
             padding: 0 1rem;
+
+            @include tablet {
+                min-height: 6rem;
+                font-size: 2.5rem;
+            }
+
+            @include phone {
+                min-height: 6rem;
+            }
         }
 
         &__date {
@@ -87,12 +138,59 @@
                 }
             }
         }
+
+        &__left2 {        
+            display: none;
+            grid-area: left2;
+
+            @include tablet {
+                display: grid;
+                grid-area: left2;
+                text-align: right;
+                margin: 20px;
+
+                height: 100px;
+    
+                div {
+                    margin-bottom: 10px;
+                }
+    
+                &__upload:hover,
+                &__remove:hover {
+                    cursor: pointer;
+                }
+            }
+
+            @include phone {
+                display: grid;
+                grid-area: left2;
+                text-align: right;
+                margin: 20px;
+    
+                div {
+                    margin-bottom: 10px;
+                }
+    
+                &__upload:hover,
+                &__remove:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     &__right {
         grid-area: right;
         margin-left: 5rem;
         color: $color-mediumbeige;
+
+        @include tablet{
+            margin-left: 0;
+        }
+
+        @include phone{
+            margin-left: 0;
+        }
 
         > div {
             display: grid;
@@ -105,21 +203,30 @@
         }
 
         > div:nth-of-type(3) {
+            width: 100%;
             min-height: 10vh;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            display: grid;
+            // display: flex;
+            // flex-direction: row;
+            // align-items: flex-start;
             margin: 20px;
 
-            button {
-                width: fit-content;
-                text-align: center;
-                padding: 5px 10px;
-                margin-right: 5px;
-
-                span{
-                    margin-left: 10px;
-                    float: right;
+            > div {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+                
+                > button {
+                    min-width: fit-content;
+                    text-align: center;
+                    padding: 5px 10px;
+                    margin-right: 5px;
+    
+                    > span{
+                        margin-left: 10px;
+                        float: right;
+                    }
                 }
             }
         }
@@ -129,6 +236,39 @@
             align-items: center;
             // width: 100%;
             
+            @include small-desk {
+                padding: 0;
+
+                > button {
+                    padding: 0;
+                    font-size: 1rem;
+                }
+            }
+
+            @include tablet {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+                > button {
+                    height: 6rem;
+                    max-width: 300px;
+                    font-size: 1.5rem;
+                }
+            }
+
+            @include phone {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+                > button {
+                    height: 6rem;
+                    max-width: 300px;
+                    font-size: 1.5rem;
+                }
+            }
+
             > button {
                 padding: 10px 20px;
                 margin: 0 auto;
@@ -147,11 +287,31 @@
             border-radius: 0.5rem;
             color: $color-mediumbeige;
             padding: 0 1rem;
+
+            @include tablet {
+                min-height: 6rem;
+                font-size: 2.5rem;
+            }
+
+            @include phone {
+                min-height: 6rem;
+                font-size: 2.5rem;
+            }
         }
 
         textarea {
             min-height: 10rem;
             padding: 1rem;
+
+            @include tablet {
+                min-height: 20rem;
+                font-size: 2.5rem;
+            }
+
+            @include phone {
+                min-height: 20rem;
+                font-size: 2.5rem;
+            }
         }
 
         &__attendees {
@@ -159,12 +319,13 @@
             display: flex;
             flex-direction: row;
             align-items: flex-start;
+            width: 100%;
 
             input {
                 width: 80%;
             }
 
-            button {
+            > button {
                 color: $color-mediumbeige;
                 width: 15%;
                 padding: 10px 5px;
@@ -174,7 +335,7 @@
                 // border-radius: 1rem;
             }
 
-            button:hover {
+            > button:hover {
                 cursor: pointer;
             }
         }
