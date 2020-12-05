@@ -77,6 +77,11 @@
                 margin: 1rem;
                 width: calc(50% - 2rem);
             }
+
+            @include tablet {
+                width: calc(100% - 2rem);
+                // width: 95%;
+            }
         }
 
         &-container_jobs {
@@ -90,6 +95,10 @@
             @include small-desk {
                 margin: 1rem;
                 width: calc(50% - 2.5rem);
+            }
+
+            @include tablet {
+                width: calc(100% - 2rem);
             }
         }
     }
