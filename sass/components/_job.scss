@@ -1,0 +1,96 @@
+.home_article_job {
+
+    display: inline-block;
+    width: 45%;
+    margin: 0 12px;
+    margin-bottom: 20px;
+
+    border: 1px solid $color-lightbeige;
+    border-radius: 1rem;
+
+
+    @include small-desk {
+        width: 90%;
+    }
+
+    @include tablet {
+        width: 90%;
+        padding: 20px;
+        
+        &_header {
+            &_name {
+                font-size: 2rem;
+            }
+
+            &_date {
+                font-size: 2rem;
+            }
+        }
+
+        &_content {
+            font-size: 2rem;
+        }
+    }
+
+    @include phone {
+        width: 90%;
+        padding: 20px;
+
+        &_header {
+            &_name {
+                font-size: 2rem;
+            }
+
+            &_date {
+                font-size: 2rem;
+            }
+        }
+
+        &_content {
+            font-size: 2rem;
+        }
+    }
+
+    &_header{
+        
+        display: grid;
+        grid-template: 
+        "logo name name" 25px
+        "logo star date" 25px
+        / 20% 50% 30%;
+
+        &_logo{
+            padding: 10px;
+            grid-area: logo;
+            align-items: center;
+            
+            img {
+                border: 1px solid $neutral-lightgrey;
+                width: 100%;
+            }
+        }
+
+        &_name{
+            grid-area: name;
+            padding: 10px;
+            font-weight: 700;
+        }
+
+        // home_article_job_header_star
+        &_star{
+            grid-area: star;
+            padding: 10px;
+        }
+
+        &_date{
+            grid-area: date;
+            padding: 10px;
+            color: $neutral-mediumgrey2;
+            font-size: 1rem;
+        }
+    }
+
+    &_content{
+        padding: 10px;
+    }
+}

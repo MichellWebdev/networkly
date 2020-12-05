@@ -91,6 +91,7 @@
             width: calc(50% - 5rem);
             display: inline-block;
             border: 1px solid $neutral-lightgrey40;
+            margin: 0 auto;
 
             @include small-desk {
                 margin: 1rem;
