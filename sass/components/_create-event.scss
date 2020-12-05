@@ -11,9 +11,23 @@
     "left middle right" auto
     / 15vw 20vw 25vw;
 
+    @include small-desk {
+
+        width: 60vw;
+        grid-template: 
+        "middle" auto
+        "left2" auto
+        "right" auto
+        / 1fr;
+
+        &__left {
+            display: none;
+        }
+    }
+
     @include tablet {
 
-        // width: 90vw;
+        width: 50vw;
         grid-template: 
         "middle" auto
         "left2" auto
@@ -47,7 +61,7 @@
         text-align: right;
         margin-top: 80px;
 
-        div {
+        > div {
             margin-bottom: 10px;
         }
 
@@ -64,6 +78,10 @@
         img {
             width: 18vw;
 
+            @include small-desk {
+                width: 100%;
+            }
+
             @include tablet {
                 width: 100%;
             }
@@ -73,9 +91,10 @@
             }
         }
 
-        > div:nth-of-type(1),
-        > div:nth-of-type(3),
-        > div:nth-of-type(4),
+        > div:nth-of-type(1), 
+        > div:nth-of-type(2), 
+        > div:nth-of-type(3), 
+        > div:nth-of-type(4), 
         > div:nth-of-type(5) {
             display: grid;
             margin: 20px;
@@ -143,16 +162,13 @@
             display: none;
             grid-area: left2;
 
-            @include tablet {
+            @include small-desk {
                 display: grid;
-                grid-area: left2;
                 text-align: right;
                 margin: 20px;
-
-                height: 100px;
-    
+                
                 div {
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                 }
     
                 &__upload:hover,
@@ -161,16 +177,34 @@
                 }
             }
 
+            @include tablet {
+                display: grid;
+                text-align: right;
+                margin: 20px;
+                
+                div {
+                    margin-bottom: 0;
+                    padding: 5px 0;
+                    height: auto;
+                }
+                
+                &__upload:hover,
+                &__remove:hover {
+                    cursor: pointer;
+                }
+            }
+
             @include phone {
                 display: grid;
-                grid-area: left2;
                 text-align: right;
                 margin: 20px;
     
                 div {
-                    margin-bottom: 10px;
+                    margin-bottom: 0;
+                    padding: 5px 0;
+                    height: auto;
                 }
-    
+
                 &__upload:hover,
                 &__remove:hover {
                     cursor: pointer;
@@ -183,6 +217,10 @@
         grid-area: right;
         margin-left: 5rem;
         color: $color-mediumbeige;
+
+        @include small-desk{
+            margin-left: 0;
+        }
 
         @include tablet{
             margin-left: 0;
@@ -235,13 +273,29 @@
             display: flex;
             align-items: center;
             // width: 100%;
-            
-            @include small-desk {
-                padding: 0;
+            height: auto;
+            margin: 20px;
+            margin-bottom: 30px;
 
+            @include small-desk {
+                // padding: 0;
+
+                // > button {
+                //     padding: 0;
+                //     font-size: 1rem;
+                // }
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                // height: 300px;
+                
                 > button {
-                    padding: 0;
-                    font-size: 1rem;
+                    height: 6rem;
+                    max-width: 400px;   
+                    width: 25vw;
+                    font-size: 1.5rem;
+                    padding-bottom: 30px;
+                    padding: 30px 30px;
                 }
             }
 
@@ -253,6 +307,7 @@
                 > button {
                     height: 6rem;
                     max-width: 300px;
+                    width: 22vw;
                     font-size: 1.5rem;
                 }
             }
@@ -265,6 +320,7 @@
                 > button {
                     height: 6rem;
                     max-width: 300px;
+                    width: 40vw;
                     font-size: 1.5rem;
                 }
             }

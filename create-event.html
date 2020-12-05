@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="template">
         <nav class="template__nav">
             <h1 class="text__2-alfaslab">Networkly</h1>
@@ -41,7 +40,8 @@
                     <a href="home.html" class="right__section-menu-item text__5-montserrat_semibold">Home</a>
                     <a href="events.html"
                         class="right__section-menu-item right__section-menu-item_active text__5-montserrat_semibold">Events</a>
-                    <a href="career-up.html" class="right__section-menu-item text__5-montserrat_semibold">Career Up</a>
+                    <a href="career-up.html" class="right__section-menu-item text__5-montserrat_semibold">Career
+                        Up</a>
                     <a href="/" class="right__section-menu-item text__5-montserrat_semibold">Jobs & Companies</a>
                 </div>
                 <div class="right__section-overview">
@@ -87,13 +87,15 @@
                         <div class="message-from">
                             <img src="assets/images/user_msg-placeholder1.jpg" alt="">
                             <div>
-                                <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare
+                                <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est
+                                    ornare
                                     id. </p>
                                 <p class="text__7-roboto_light">14 October 2020 20:59</p>
                             </div>
                         </div>
                         <div class="message-to">
-                            <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare id.
+                            <p class="text__7-roboto_regular">Vivamus fringilla ligula lorem, in egestas est ornare
+                                id.
                             </p>
                             <p class="text__7-roboto_light">14 October 2020 20:59</p>
                         </div>
@@ -127,7 +129,6 @@
 
 
         <main class="template__main">
-
             <section class="template__main-container">
                 <div class="main__events-header">
                     <div class="main__events-header__breadcrumb text__7-roboto_regular">
@@ -191,7 +192,8 @@
                         </div>
                         <div class="main__create_events__right">
                             <div>
-                                <label class="text__6-roboto_light" for="create_event_description">Description *</label>
+                                <label class="text__6-roboto_light" for="create_event_description">Description
+                                    *</label>
                                 <textarea class="text__7-roboto_medium" id="create_event_description" type="text"
                                     required></textarea>
                             </div>
@@ -223,9 +225,19 @@
     </div>
 
     <!-- Modal -->
-    <div id="cancelModal" class="cancelModal">
-        <div class="modal-content">
-
+    <div onclick="closeCancelModal()" id="cancelModal" class="cancelModal">
+        <div class="cancelModal-content">
+            <div onclick="closeCancelModal()" class="cancelModal-content-closeButton">
+                &times;
+            </div>
+            <div class="cancelModal-content-text text__6-roboto_light">
+                Are you sure? If you click YES, all the information you provided will
+                be removed.
+            </div>
+            <div class="cancelModal-content-btn">
+                <button onclick="closeCancelModal()" class="btn btn__medium-white">No, go back</button>
+                <button onclick="window.location.href = 'events.html'" class="btn btn__medium-green">Yes, sure</button>
+            </div>
         </div>
     </div>
     <!-- Modal END -->
