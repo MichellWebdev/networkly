@@ -859,6 +859,13 @@ body {
     background-size: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem; }
+  .article__event-image2 {
+    width: 100%;
+    height: 20rem;
+    background: url("../assets/images/security_event.jpg");
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
   .article__event-content {
     padding: 1.5rem; }
     .article__event-content h3 {

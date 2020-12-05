@@ -36,6 +36,8 @@
     }
 
     &__main {
+        // float: left;
+        // align-items: flex-start;
         overflow: scroll;
         @include phone {
             grid-column: 1/span 2;
