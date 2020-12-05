@@ -5,7 +5,7 @@ var cancelModal = document.getElementById('cancelModal');
 // var cancelModal = document.getElementById('cover');
 
 function populateDate() {
-    document.getElementById('create_event_date').value = "March 4th, 2021"
+    document.getElementById('create_event_date').value = "24 - 25, March, 2021"
 }
 
 function addAtendees() {

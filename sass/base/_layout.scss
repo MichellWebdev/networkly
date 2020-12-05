@@ -36,6 +36,8 @@
     }
 
     &__main {
+        // float: left;
+        // align-items: flex-start;
         overflow: scroll;
         @include phone {
             grid-column: 1/span 2;
@@ -75,6 +77,11 @@
                 margin: 1rem;
                 width: calc(50% - 2rem);
             }
+
+            @include tablet {
+                width: calc(100% - 2rem);
+                // width: 95%;
+            }
         }
 
         &-container_jobs {
@@ -84,10 +91,15 @@
             width: calc(50% - 5rem);
             display: inline-block;
             border: 1px solid $neutral-lightgrey40;
+            margin: 0 auto;
 
             @include small-desk {
                 margin: 1rem;
                 width: calc(50% - 2.5rem);
+            }
+
+            @include tablet {
+                width: calc(100% - 2rem);
             }
         }
     }

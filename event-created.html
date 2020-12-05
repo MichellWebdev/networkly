@@ -13,9 +13,9 @@
     <div class="template">
         <nav class="template__nav">
             <h1 class="text__2-alfaslab">Networkly</h1>
-            <a href="home.html"
-                class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Home</a>
-            <a href="events.html" class="template__nav-item text__5-montserrat_semibold">Events</a>
+            <a href="home.html" class="template__nav-item text__5-montserrat_semibold">Home</a>
+            <a href="events.html"
+                class="template__nav-item template__nav-item_active text__5-montserrat_semibold">Events</a>
             <a href="career-up.html" class="template__nav-item text__5-montserrat_semibold">Career Up</a>
             <a href="/" class="template__nav-item text__5-montserrat_semibold">Jobs & Companies</a>
             <div onclick="openMenu()" class="burger-menu"></div>
@@ -35,9 +35,9 @@
             </div>
             <div class="right__section-container">
                 <div class="right__section-menu">
-                    <a href="home.html"
-                        class="right__section-menu-item right__section-menu-item_active text__5-montserrat_semibold">Home</a>
-                    <a href="events.html" class="right__section-menu-item text__5-montserrat_semibold">Events</a>
+                    <a href="home.html" class="right__section-menu-item text__5-montserrat_semibold">Home</a>
+                    <a href="events.html"
+                        class="right__section-menu-item right__section-menu-item_active text__5-montserrat_semibold">Events</a>
                     <a href="career-up.html" class="right__section-menu-item text__5-montserrat_semibold">Career Up</a>
                     <a href="/" class="right__section-menu-item text__5-montserrat_semibold">Jobs & Companies</a>
                 </div>
@@ -119,42 +119,88 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
         <main class="template__main">
 
             <section class="template__main-container">
+                <div class="main__events-header">
+                    <div class="main__search">
+                        <div class="main__search-image">
+                            <img src="assets/icons/search.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Search events">
+                    </div>
+                    <div class="main__status-success">
+                        <img src="assets/icons/success.png" alt="">
+                        <p class="text__7-roboto_medium">Event created successfully!</p>
+                    </div>
+                    <div class="main__status-fail">
+                        <img src="assets/icons/fail.png" alt="">
+                        <p class="text__7-roboto_medium">Event creation failed.</p>
+                    </div>
+                    <button onclick="window.location.href = 'create-event.html'" class="btn btn__large-green">CREATE
+                        EVENT</button>
+                </div>
 
-                <div class="main__events-subheader">
-                    <h2 class="text__2-roboto_bold">Events</h2>
-                    <a href="events.html" class="text__6-roboto_medium">See More</a>
+                <div class="main__events-subheader_events">
+                    <h2 class="text__2-roboto_bold">All Events ( 254 )</h2>
+                    <ul class="main__events-filters">
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-active">
+                            Newest
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Location
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Date
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium ">
+                            Events
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium ">
+                            Seminars
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium ">
+                            Saved
+                        </li>
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Popular
+                        </li>
+                    </ul>
+                    <ul class="main__events-filters_tablet">
+                        <li class="main__events-filters_item text__6-roboto_medium main__events-filters_item-dropdown">
+                            Filters
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="main__events-container">
                     <article class="article__event">
-                        <div class="article__event-image"></div>
+                        <div class="article__event-image2"></div>
                         <div class="article__event-content">
-                            <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
+                            <h3 class="text__5-montserrat_bold ">This is new event - Study Group for Web Security</h3>
                             <div class="article__event-content_data">
                                 <div class="article__event-content_metadata">
                                     <img class="article__event-content_metadata-icon"
                                         src="assets/icons/participants-turqoise.png" alt="">
-                                    <p class="text__8-roboto_medium">1424 Attendees</p>
+                                    <p class="text__8-roboto_medium">423 Attendees</p>
                                 </div>
                                 <div class="article__event-content_metadata">
                                     <img class="article__event-content_metadata-icon"
                                         src="assets/icons/calendar-turqoise.png" alt="">
-                                    <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
+                                    <p class="text__8-roboto_medium">24 - 25 Mar 2021</p>
                                 </div>
                                 <div class="article__event-content_metadata">
                                     <img class="article__event-content_metadata-icon"
                                         src="assets/icons/location-turqoise.png" alt="">
-                                    <p class="text__8-roboto_medium">CPH, Denmark</p>
+                                    <p class="text__8-roboto_medium">VAN, Canada</p>
                                 </div>
                                 <div class="article__event-content_metadata">
                                     <img class="article__event-content_metadata-icon"
                                         src="assets/icons/connection-turqoise.png" alt="">
-                                    <p class="text__8-roboto_medium">Seminar</p>
+                                    <p class="text__8-roboto_medium">Meetup</p>
                                 </div>
                             </div>
                             <p class="article__event-content_paragraph text__6-montserrat_light">Sed ut perspiciatis
@@ -229,213 +275,39 @@
                         </div>
                         <button class="btn btn__small-event"></button>
                     </article>
-                </div>
-            </section>
 
-            <section class="template__main-container_career">
-                <div class="main__career-subheader">
-                    <h2 class="text__2-roboto_bold">Career Up</h2>
-                    <a href="career-up.html" class="text__6-roboto_medium">See More</a>
-                </div>
-
-                <div class="home_article_post">
-                    <div class="home_article_post-image">
-                        <img src="assets/images/post_placeholder.jpg">
-                        <div class="home_article_post-image_date text__8-roboto_light">24 November, 2020
-                            <span class="home_article_post-image_date_author2">by Sarah Nahi</span>
+                    <article class="article__event">
+                        <div class="article__event-image"></div>
+                        <div class="article__event-content">
+                            <h3 class="text__5-montserrat_bold ">More About React Native And Use Cases</h3>
+                            <div class="article__event-content_data">
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/participants-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">1424 Attendees</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/calendar-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">12 - 13 Jan 2021</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/location-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">CPH, Denmark</p>
+                                </div>
+                                <div class="article__event-content_metadata">
+                                    <img class="article__event-content_metadata-icon"
+                                        src="assets/icons/connection-turqoise.png" alt="">
+                                    <p class="text__8-roboto_medium">Seminar</p>
+                                </div>
+                            </div>
+                            <p class="article__event-content_paragraph text__6-montserrat_light">Sed ut perspiciatis
+                                unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                                aperiam, eaque ipsa...</p>
                         </div>
-                    </div>
-                    <div class="home_article_post-header">
-                        <h3 class="text__8-roboto_medium">More About React Native And Use Cases</h3>
-                        <div class="home_article_post-header_authorAndTags text__7-roboto_regular">
-                            <!-- <div class="home_article_post-header_authorAndTags-author">by <span
-                                    class="text__7-roboto_light">Sarah Nahi</span></div> -->
-                            <button class="tag tag_post">React</button>
-                            <button class="tag tag_post">Interview Tips</button>
-                        </div>
-                    </div>
-                    <div class="home_article_post-content text__8-roboto_light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </div>
-                </div>
-
-                <div class="home_article_post">
-                    <div class="home_article_post-image">
-                        <img src="assets/images/post_placeholder.jpg">
-                        <div class="home_article_post-image_date text__8-roboto_light">24 November, 2020
-                            <span class="home_article_post-image_date_author2">by Sarah Nahi</span>
-                        </div>
-                    </div>
-                    <div class="home_article_post-header">
-                        <h3 class="text__8-roboto_medium">More About React Native And Use Cases</h3>
-                        <div class="home_article_post-header_authorAndTags text__7-roboto_regular">
-                            <!-- <div class="home_article_post-header_authorAndTags-author">by <span
-                                    class="text__7-roboto_light">Sarah Nahi</span></div> -->
-                            <button class="tag tag_post">React</button>
-                            <button class="tag tag_post">Interview Tips</button>
-                        </div>
-                    </div>
-                    <div class="home_article_post-content text__8-roboto_light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </div>
-                </div>
-
-                <div class="home_article_post">
-                    <div class="home_article_post-image">
-                        <img src="assets/images/post_placeholder.jpg">
-                        <div class="home_article_post-image_date text__8-roboto_light">24 November, 2020
-                            <span class="home_article_post-image_date_author2">by Sarah Nahi</span>
-                        </div>
-                    </div>
-                    <div class="home_article_post-header">
-                        <h3 class="text__8-roboto_medium">More About React Native And Use Cases</h3>
-                        <div class="home_article_post-header_authorAndTags text__7-roboto_regular">
-                            <!-- <div class="home_article_post-header_authorAndTags-author">by <span
-                                    class="text__7-roboto_light">Sarah Nahi</span></div> -->
-                            <button class="tag tag_post">React</button>
-                            <button class="tag tag_post">Interview Tips</button>
-                        </div>
-                    </div>
-                    <div class="home_article_post-content text__8-roboto_light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="template__main-container_jobs">
-                <div class="main__jobs-subheader">
-                    <h2 class="text__2-roboto_bold">Jobs & Companies</h2>
-                    <a href="/" class="text__6-roboto_medium">See More</a>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
-                </div>
-
-                <div class="home_article_job">
-                    <div class="home_article_job_header">
-                        <div class="home_article_job_header_logo">
-                            <img src="assets/images/tradeshift.png" alt="">
-                        </div>
-                        <div class="home_article_job_header_name text__7-roboto_medium">
-                            TradeShift
-                        </div>
-                        <div class="home_article_job_header_star">
-                            &#11088; &#11088; &#11088; &#11088; &#11088;
-                        </div>
-                        <div class="home_article_job_header_date text__8-roboto_light">
-                            24/11/2020
-                        </div>
-                    </div>
-                    <div class="home_article_job_content text__8-roboto_light">
-                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                        ut aliquid ex ea commodi consequatur?
-                    </div>
+                        <button class="btn btn__small-event"></button>
+                    </article>
                 </div>
             </section>
 
