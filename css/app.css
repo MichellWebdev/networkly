@@ -501,7 +501,20 @@ body {
   margin-top: 5vh;
   margin-bottom: 8vh;
   display: grid;
-  grid-template: "left middle right" auto / 17vw 20vw 25vw; }
+  grid-template: "left middle right" auto / 15vw 20vw 25vw; }
+  @media (max-width: 768px) {
+    .main__create_events {
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      .main__create_events__left {
+        display: none; } }
+  @media (max-width: 600px) {
+    .main__create_events {
+      width: 90vw;
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      .main__create_events__left {
+        display: none; }
+      .main__create_events input {
+        min-height: 6rem; } }
   .main__create_events__left {
     grid-area: left;
     text-align: right;
@@ -515,7 +528,16 @@ body {
     color: #AC9890; }
     .main__create_events__middle img {
       width: 18vw; }
-    .main__create_events__middle > div {
+      @media (max-width: 768px) {
+        .main__create_events__middle img {
+          width: 100%; } }
+      @media (max-width: 600px) {
+        .main__create_events__middle img {
+          width: 100%; } }
+    .main__create_events__middle > div:nth-of-type(1),
+    .main__create_events__middle > div:nth-of-type(3),
+    .main__create_events__middle > div:nth-of-type(4),
+    .main__create_events__middle > div:nth-of-type(5) {
       display: grid;
       margin: 20px;
       margin-bottom: 30px; }
@@ -529,6 +551,15 @@ body {
       border-radius: 0.5rem;
       color: #AC9890;
       padding: 0 1rem; }
+      @media (max-width: 768px) {
+        .main__create_events__middle input,
+        .main__create_events__middle select {
+          min-height: 6rem;
+          font-size: 2.5rem; } }
+      @media (max-width: 600px) {
+        .main__create_events__middle input,
+        .main__create_events__middle select {
+          min-height: 6rem; } }
     .main__create_events__middle__date {
       margin: 0;
       display: flex;
@@ -546,10 +577,40 @@ body {
           width: 30px; }
         .main__create_events__middle__date span:hover {
           cursor: pointer; }
+    .main__create_events__middle__left2 {
+      display: none;
+      grid-area: left2; }
+      @media (max-width: 768px) {
+        .main__create_events__middle__left2 {
+          display: grid;
+          grid-area: left2;
+          text-align: right;
+          margin: 20px;
+          height: 100px; }
+          .main__create_events__middle__left2 div {
+            margin-bottom: 10px; }
+          .main__create_events__middle__left2__upload:hover, .main__create_events__middle__left2__remove:hover {
+            cursor: pointer; } }
+      @media (max-width: 600px) {
+        .main__create_events__middle__left2 {
+          display: grid;
+          grid-area: left2;
+          text-align: right;
+          margin: 20px; }
+          .main__create_events__middle__left2 div {
+            margin-bottom: 10px; }
+          .main__create_events__middle__left2__upload:hover, .main__create_events__middle__left2__remove:hover {
+            cursor: pointer; } }
   .main__create_events__right {
     grid-area: right;
     margin-left: 5rem;
     color: #AC9890; }
+    @media (max-width: 768px) {
+      .main__create_events__right {
+        margin-left: 0; } }
+    @media (max-width: 600px) {
+      .main__create_events__right {
+        margin-left: 0; } }
     .main__create_events__right > div {
       display: grid;
       margin: 20px;
@@ -557,22 +618,50 @@ body {
     .main__create_events__right > div:nth-of-type(2) {
       margin-bottom: 10px; }
     .main__create_events__right > div:nth-of-type(3) {
+      width: 100%;
       min-height: 10vh;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
+      display: grid;
       margin: 20px; }
-      .main__create_events__right > div:nth-of-type(3) button {
-        width: fit-content;
-        text-align: center;
-        padding: 5px 10px;
-        margin-right: 5px; }
-        .main__create_events__right > div:nth-of-type(3) button span {
-          margin-left: 10px;
-          float: right; }
+      .main__create_events__right > div:nth-of-type(3) > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%; }
+        .main__create_events__right > div:nth-of-type(3) > div > button {
+          min-width: fit-content;
+          text-align: center;
+          padding: 5px 10px;
+          margin-right: 5px; }
+          .main__create_events__right > div:nth-of-type(3) > div > button > span {
+            margin-left: 10px;
+            float: right; }
     .main__create_events__right > div:last-of-type {
       display: flex;
       align-items: center; }
+      @media (max-width: 1100px) {
+        .main__create_events__right > div:last-of-type {
+          padding: 0; }
+          .main__create_events__right > div:last-of-type > button {
+            padding: 0;
+            font-size: 1rem; } }
+      @media (max-width: 768px) {
+        .main__create_events__right > div:last-of-type {
+          padding: 0;
+          margin: 0;
+          width: 100%; }
+          .main__create_events__right > div:last-of-type > button {
+            height: 6rem;
+            max-width: 300px;
+            font-size: 1.5rem; } }
+      @media (max-width: 600px) {
+        .main__create_events__right > div:last-of-type {
+          padding: 0;
+          margin: 0;
+          width: 100%; }
+          .main__create_events__right > div:last-of-type > button {
+            height: 6rem;
+            max-width: 300px;
+            font-size: 1.5rem; } }
       .main__create_events__right > div:last-of-type > button {
         padding: 10px 20px;
         margin: 0 auto; }
@@ -586,24 +675,43 @@ body {
       border-radius: 0.5rem;
       color: #AC9890;
       padding: 0 1rem; }
+      @media (max-width: 768px) {
+        .main__create_events__right input,
+        .main__create_events__right textarea {
+          min-height: 6rem;
+          font-size: 2.5rem; } }
+      @media (max-width: 600px) {
+        .main__create_events__right input,
+        .main__create_events__right textarea {
+          min-height: 6rem;
+          font-size: 2.5rem; } }
     .main__create_events__right textarea {
       min-height: 10rem;
       padding: 1rem; }
+      @media (max-width: 768px) {
+        .main__create_events__right textarea {
+          min-height: 20rem;
+          font-size: 2.5rem; } }
+      @media (max-width: 600px) {
+        .main__create_events__right textarea {
+          min-height: 20rem;
+          font-size: 2.5rem; } }
     .main__create_events__right__attendees {
       margin: 0;
       display: flex;
       flex-direction: row;
-      align-items: flex-start; }
+      align-items: flex-start;
+      width: 100%; }
       .main__create_events__right__attendees input {
         width: 80%; }
-      .main__create_events__right__attendees button {
+      .main__create_events__right__attendees > button {
         color: #AC9890;
         width: 15%;
         padding: 10px 5px;
         margin: auto;
         background: white;
         border: none; }
-      .main__create_events__right__attendees button:hover {
+      .main__create_events__right__attendees > button:hover {
         cursor: pointer; }
 
 .cancelModal {

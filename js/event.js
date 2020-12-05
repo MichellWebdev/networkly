@@ -1,5 +1,6 @@
 var click = 0;
-var randNames = ['User A', 'User B', 'User C', 'User D', 'User E'];
+var divNum = 1;
+var randNames = ['John Smith', 'Jane Doe', 'Selena Diaz', 'Florian Rau', 'Lorine Metz', 'Rowland Price', 'Alberto Strosin'];
 var cancelModal = document.getElementById('cancelModal');
 
 function populateDate() {
@@ -8,16 +9,34 @@ function populateDate() {
 
 function addAtendees() {
 
+    click++
     var tag = ''
 
-    for (i = 0; i <= click; i++) {
-        var name = randNames[i]
-        tag += `<button class="tag_attendees text__8-roboto_light" type="button">${name}
-                <span class="remove_participant">&#215;</span></button>`
+    if (click > 0 && click < 4) {
+        for (i = 0; i < click; i++) {
+            var name = randNames[i]
+            tag += `<button class="tag_attendees text__8-roboto_light" type="button">${name}
+            <span class="remove_participant">&#215;</span></button>`
+        }
+        document.getElementById('atendee_div1').innerHTML = tag
     }
 
-    document.getElementById('atendee_div').innerHTML = tag
-    click++
+    if (click > 3 && click < 7) {
+        for (i = 0; i < 3; i++) {
+            var name = randNames[i]
+            tag += `<button class="tag_attendees text__8-roboto_light" type="button">${name}
+            <span class="remove_participant">&#215;</span></button>`
+        }
+        document.getElementById('atendee_div1').innerHTML = tag
+        tag = ''
+
+        for (i = 3; i < click; i++) {
+            var name = randNames[i]
+            tag += `<button class="tag_attendees text__8-roboto_light" type="button">${name}
+            <span class="remove_participant">&#215;</span></button>`
+        }
+        document.getElementById('atendee_div2').innerHTML = tag
+    }
 }
 
 function displayCancelModal() {
