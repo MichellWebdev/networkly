@@ -1345,6 +1345,13 @@ input::placeholder {
   .home_article_job_content {
     padding: 10px; }
 
+.main__jobsAndCompanies-header {
+  text-align: center;
+  margin: 35vh 0; }
+  .main__jobsAndCompanies-header div {
+    margin: 0 auto;
+    padding: 10px 0; }
+
 .loginModal {
   display: none;
   position: fixed;
