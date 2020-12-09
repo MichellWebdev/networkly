@@ -47,6 +47,19 @@
             display: none;
         }
 
+        &-home {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            .template__main-container {
+                grid-column: 1/span 2;
+            }
+
+            @include tablet {
+                display: block;
+            }
+        }
+
         background-color: $neutral-dirtywhite;
 
         &-container {
@@ -69,38 +82,26 @@
             margin: 0.5rem 2.5rem;
             margin-right: 1.75rem;
             background-color: white;
-            width: calc(50% - 5rem);
             display: inline-block;
             border: 1px solid $neutral-lightgrey40;
 
             @include small-desk {
                 margin: 1rem;
-                width: calc(50% - 2rem);
             }
 
-            @include tablet {
-                width: calc(100% - 2rem);
-                // width: 95%;
-            }
         }
 
         &-container_jobs {
             padding: 2rem;
-            margin: 0.5rem 2.5rem;
             background-color: white;
-            width: calc(50% - 5rem);
             display: inline-block;
             border: 1px solid $neutral-lightgrey40;
-            margin: 0 auto;
+            margin: 0.5rem 2.5rem;
 
             @include small-desk {
                 margin: 1rem;
-                width: calc(50% - 2.5rem);
             }
 
-            @include tablet {
-                width: calc(100% - 2rem);
-            }
         }
     }
 }
@@ -147,10 +148,11 @@
         margin-bottom: 2rem;
         
         &_events, &_career {
-            @include small-desk {
-                display: flex;
-                justify-content: space-between;
-            }
+            // DO NOT uncomment
+            // @include small-desk {
+            //     display: flex;
+            //     justify-content: space-between;
+            // }
         }
 
         a {

@@ -100,6 +100,14 @@ body {
         grid-column: 1/span 2; } }
     .template__main::-webkit-scrollbar {
       display: none; }
+    .template__main-home {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .template__main-home .template__main-container {
+        grid-column: 1/span 2; }
+      @media (max-width: 768px) {
+        .template__main-home {
+          display: block; } }
     .template__main-container {
       padding: 2rem;
       margin: 2.5rem;
@@ -116,31 +124,20 @@ body {
       margin: 0.5rem 2.5rem;
       margin-right: 1.75rem;
       background-color: white;
-      width: calc(50% - 5rem);
       display: inline-block;
       border: 1px solid rgba(219, 219, 219, 0.5); }
       @media (max-width: 1100px) {
         .template__main-container_career {
-          margin: 1rem;
-          width: calc(50% - 2rem); } }
-      @media (max-width: 768px) {
-        .template__main-container_career {
-          width: calc(100% - 2rem); } }
+          margin: 1rem; } }
     .template__main-container_jobs {
       padding: 2rem;
-      margin: 0.5rem 2.5rem;
       background-color: white;
-      width: calc(50% - 5rem);
       display: inline-block;
       border: 1px solid rgba(219, 219, 219, 0.5);
-      margin: 0 auto; }
+      margin: 0.5rem 2.5rem; }
       @media (max-width: 1100px) {
         .template__main-container_jobs {
-          margin: 1rem;
-          width: calc(50% - 2.5rem); } }
-      @media (max-width: 768px) {
-        .template__main-container_jobs {
-          width: calc(100% - 2rem); } }
+          margin: 1rem; } }
 
 .main__events-container,
 .main__create_events-container,
@@ -207,18 +204,6 @@ body {
 .main__jobs-subheader {
   margin: 1rem 0;
   margin-bottom: 2rem; }
-  @media (max-width: 1100px) {
-    .main__events-subheader_events, .main__events-subheader_career,
-    .main__create_events-subheader_events,
-    .main__create_events-subheader_career,
-    .main__posts-subheader_events,
-    .main__posts-subheader_career,
-    .main__career-subheader_events,
-    .main__career-subheader_career,
-    .main__jobs-subheader_events,
-    .main__jobs-subheader_career {
-      display: flex;
-      justify-content: space-between; } }
   .main__events-subheader a,
   .main__create_events-subheader a,
   .main__posts-subheader a,
@@ -325,7 +310,7 @@ body {
 
 .text__2-roboto_bold {
   font-family: 'Roboto', sans-serif;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight: 700; }
 
 .text__3-montserrat_bold {
@@ -506,23 +491,23 @@ body {
   margin-top: 5vh;
   margin-bottom: 8vh;
   display: grid;
-  grid-template: "left middle right" auto / 15vw 20vw 25vw; }
+  grid-template: "left middle right" auto / 15vw 20vw 25vw; }
   @media (max-width: 1100px) {
     .main__create_events {
       width: 60vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; } }
   @media (max-width: 768px) {
     .main__create_events {
       width: 50vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; } }
   @media (max-width: 600px) {
     .main__create_events {
       width: 90vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; }
       .main__create_events input {
@@ -1321,7 +1306,7 @@ input::placeholder {
         font-size: 2rem; } }
   .home_article_job_header {
     display: grid;
-    grid-template: "logo name name" 25px "logo star date" 25px / 20% 50% 30%; }
+    grid-template: "logo name name" 25px "logo star date" 25px / 20% 50% 30%; }
     .home_article_job_header_logo {
       padding: 10px;
       grid-area: logo;
@@ -1888,7 +1873,7 @@ input::placeholder {
     max-height: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image img {
       height: auto;
       max-width: 100%;
@@ -1908,11 +1893,11 @@ input::placeholder {
 
 @media (max-width: 768px) {
   margin-bottom: 20px;
-  grid-template: "image" auto "header" auto "content" auto / 1fr;
+  grid-template: "image" auto "header" auto "content" auto / 1fr;
   .home_article_post {
     width: 70%;
     max-height: 600px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image {
       height: 200px; }
       .home_article_post-image img {
@@ -1932,10 +1917,10 @@ input::placeholder {
 
 @media (max-width: 600px) {
   margin-bottom: 20px;
-  grid-template: "image" auto "header" auto "content" auto / 1fr;
+  grid-template: "image" auto "header" auto "content" auto / 1fr;
   .home_article_post {
     max-height: 600px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image {
       height: 200px; }
       .home_article_post-image img {
