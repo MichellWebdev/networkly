@@ -838,9 +838,6 @@ body {
           height: 40px;
           width: 45%;
           font-size: 1.5rem; } }
-    .cancelModal-content-btn button:hover {
-      color: white;
-      background-color: #43736C; }
 
 .article__event {
   width: 21vw;
