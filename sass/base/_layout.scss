@@ -1,109 +1,111 @@
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
 .template {
-    display: grid;
-    grid-template-columns: 10fr 3.75fr;
-    grid-template-rows: 7.5rem calc(100vh - 7.5rem);
+  display: grid;
+  grid-template-columns: 10fr 3.75fr;
+  grid-template-rows: 7.5rem calc(100vh - 7.5rem);
 
-    @include small-desk {  
-       grid-template-columns: 10fr 5fr;
-    }   
+  @include small-desk {
+    grid-template-columns: 10fr 5fr;
+  }
 
-    @include tablet {  
-        grid-template-columns: 7fr 5fr;  
+  @include tablet {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  &__nav {
+    height: 7.5rem;
+    width: 100%;
+
+    @include phone {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__section {
+    box-shadow: $medium-shadow;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+
+    @include phone {
+      width: 90%;
+      right: 0;
+      position: absolute;
+      background-color: white;
+      display: none;
+    }
+  }
+
+  &__main {
+    // float: left;
+    // align-items: flex-start;
+    overflow: scroll;
+    @include phone {
+      grid-column: 1 / span 2;
     }
 
-    &__nav {
-        height: 7.5rem;
-        width: 100%;
-
-        @include phone {
-            grid-column: 1/span 2;
-        }
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    &__section {
-        box-shadow: $medium-shadow;
-        z-index: 3;
-        width: 100%;
-        height: 100vh;
+    &-home {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-        @include phone {
-            width: 90%;
-            right: 0;
-            position: absolute;
-            background-color: white;
-            display: none;
-        }
+      .template__main-container {
+        grid-column: 1 / span 2;
+      }
+
+      @include tablet {
+        display: block;
+      }
     }
 
-    &__main {
-        // float: left;
-        // align-items: flex-start;
-        overflow: scroll;
-        @include phone {
-            grid-column: 1/span 2;
-        }
-        
-        &::-webkit-scrollbar {
-            display: none;
-        }
+    background-color: $neutral-dirtywhite;
 
-        &-home {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-    
-            .template__main-container {
-                grid-column: 1/span 2;
-            }
+    &-container {
+      padding: 2rem;
+      margin: 2.5rem;
+      background-color: white;
+      width: calc(100% - 5rem);
+      display: inline-block;
+      border: 1px solid $neutral-lightgrey40;
 
-            @include tablet {
-                display: block;
-            }
-        }
-
-        background-color: $neutral-dirtywhite;
-
-        &-container {
-            padding: 2rem;
-            margin: 2.5rem;
-            background-color: white;
-            width: calc(100% - 5rem);
-            display: inline-block;
-            border: 1px solid $neutral-lightgrey40;
-
-            @include small-desk {
-                margin: 1rem;
-                width: calc(100% - 2rem);
-            }
-
-        }
-
-        &-container_career {
-            padding: 2rem;
-            margin: 0.5rem 2.5rem;
-            margin-right: 1.75rem;
-            background-color: white;
-            display: inline-block;
-            border: 1px solid $neutral-lightgrey40;
-
-            @include small-desk {
-                margin: 1rem;
-            }
-
-        }
-
-        &-container_jobs {
-            padding: 2rem;
-            background-color: white;
-            display: inline-block;
-            border: 1px solid $neutral-lightgrey40;
-            margin: 0.5rem 2.5rem;
-
-            @include small-desk {
-                margin: 1rem;
-            }
-
-        }
+      @include small-desk {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+      }
     }
+
+    &-container_career {
+      padding: 2rem;
+      margin: 0.5rem 2.5rem;
+      margin-right: 1.75rem;
+      background-color: white;
+      display: inline-block;
+      border: 1px solid $neutral-lightgrey40;
+
+      @include small-desk {
+        margin: 1rem;
+      }
+    }
+
+    &-container_jobs {
+      padding: 2rem;
+      background-color: white;
+      display: inline-block;
+      border: 1px solid $neutral-lightgrey40;
+      margin: 0.5rem 2.5rem;
+
+      @include small-desk {
+        margin: 1rem;
+      }
+    }
+  }
 }
 
 .main__events,
@@ -111,109 +113,108 @@
 .main__posts,
 .main__career,
 .main__jobs {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
-    &-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    @include tablet {
+      margin: 2rem 0;
+    }
+  }
 
-        @include tablet {
-            margin: 2rem 0;
-        }
+  &-header {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  &-header,
+  &-subheader {
+    &__breadcrumb {
+      display: grid;
     }
 
-    &-header {
-        margin-bottom: 3rem;
-        position: relative;
+    @include tablet {
+      display: flex !important;
     }
 
-    &-header,
-    &-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-        &__breadcrumb {
-            display: grid;
-        }
+  &-subheader {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
 
-        @include tablet {
-            display: flex !important; 
-        }
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &_events,
+    &_career {
+      // DO NOT uncomment
+      // @include small-desk {
+      //     display: flex;
+      //     justify-content: space-between;
+      // }
     }
 
-    &-subheader {
-        margin: 1rem 0;
-        margin-bottom: 2rem;
-        
-        &_events, &_career {
-            // DO NOT uncomment
-            // @include small-desk {
-            //     display: flex;
-            //     justify-content: space-between;
-            // }
-        }
+    a {
+      color: $color-darkpink;
+    }
+  }
 
-        a {
-            color: $color-darkpink;
-        }
+  &-subheader2 {
+    // margin: 2rem 0;
+    display: grid;
+  }
+
+  &-filters {
+    list-style-type: none;
+    color: $color-darkgreen;
+
+    @include tablet {
+      display: none;
     }
 
-    &-subheader2 {
-        // margin: 2rem 0;
-        display: grid;
+    &_tablet {
+      display: none;
+
+      @include tablet {
+        display: block;
+
+        li {
+          border-radius: 1rem;
+        }
+      }
     }
 
-    &-filters {  
-        list-style-type: none;
-        color: $color-darkgreen;
+    // @include small-desk {
+    margin: 1.5rem 0;
+    // }
 
-        @include tablet {
-            display: none; 
-        }
-
-        &_tablet {
-            display: none;
-
-            @include tablet {
-                display: block; 
-
-                li {
-                    border-radius: 1rem; 
-                }
-            }
-        }
-
-        // @include small-desk {
-            margin: 1.5rem 0;
-        // }
-
-        li:nth-of-type(1) {
-            border-top-left-radius: 1rem;
-            border-bottom-left-radius: 1rem;
-        }
-
-        li:last-of-type {
-            border-top-right-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-        }
-
-        &_item {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            height: 3.5rem;
-            margin: -2px;
-            background-color: white;
-            border: 1px solid $color-mediumgreen;
-
-            &-active {
-                background-color: $color-lightgreen;
-            }
-
-            &-dropdown::after {
-                content: '▾';
-            }
-        }
+    li:nth-of-type(1) {
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
     }
+
+    li:last-of-type {
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    &_item {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      height: 3.5rem;
+      margin: -2px;
+      background-color: white;
+      border: 1px solid $color-mediumgreen;
+
+      &-active {
+        background-color: $color-lightgreen;
+      }
+
+      &-dropdown::after {
+        content: '▾';
+      }
+    }
+  }
 }

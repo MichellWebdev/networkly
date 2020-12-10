@@ -1,119 +1,118 @@
 .article__event {
-    width: 21vw;
-    border: 1px solid $color-lightbeige;
-    border-radius: 1rem;
-    margin: 0 0.25rem;
-    margin-bottom: 0.5rem;
-    
-    @include small-desk {  
-        width: 30vw;
-        margin: 0 0.5rem;
-        margin-bottom: 0.75rem;
+  width: 21vw;
+  border: 1px solid $color-lightbeige;
+  border-radius: 1rem;
+  margin: 0 0.25rem;
+  margin-bottom: 0.5rem;
+
+  @include small-desk {
+    width: 30vw;
+    margin: 0 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  @include tablet {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  &-image {
+    width: 100%;
+    height: 20rem;
+    // -webkit-clip-path: circle(75% at 50% 5%);
+    // clip-path: circle(75% at 50% 5%);
+    background: url('../assets/images/event_placeholder.jpg');
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &-image2 {
+    width: 100%;
+    height: 20rem;
+    // -webkit-clip-path: circle(75% at 50% 5%);
+    // clip-path: circle(75% at 50% 5%);
+    background: url('../assets/images/security_event.jpg');
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &-content {
+    padding: 1.5rem;
+
+    h3 {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $neutral-mediumgrey;
+      margin-bottom: 0.5rem;
     }
 
-    @include tablet {
-        width: 90%;
-        margin-bottom: 1.5rem;
+    &_data {
+      display: flex;
+      justify-content: space-between;
     }
 
-    &-image {
-        width: 100%;
-        height: 20rem;
-        // -webkit-clip-path: circle(75% at 50% 5%);
-        // clip-path: circle(75% at 50% 5%);
-        background: url("../assets/images/event_placeholder.jpg");
-        background-size: cover;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    }
+    &_metadata {
+      width: 25%;
+      padding: 0.25rem;
 
-    &-image2 {
-        width: 100%;
-        height: 20rem;
-        // -webkit-clip-path: circle(75% at 50% 5%);
-        // clip-path: circle(75% at 50% 5%);
-        background: url("../assets/images/security_event.jpg");
-        background-size: cover;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    }
+      &-icon {
+        margin-left: calc(50% - 1.25rem);
+        width: $universal-icon-size;
+      }
 
-    &-content {
-        padding: 1.5rem;
+      p {
+        text-align: center;
+      }
 
-        h3 {
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid $neutral-mediumgrey;
-            margin-bottom: 0.5rem;
+      &:last-child {
+        @include phone {
+          display: none;
         }
-
-        &_data {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        &_metadata {
-            width: 25%;
-            padding: 0.25rem;
-
-            &-icon {
-                margin-left: calc(50% - 1.25rem);
-                width: $universal-icon-size;
-            }
-
-            p {
-                text-align: center;
-            }
-
-            &:last-child {
-                @include phone {
-                    display: none;
-                }
-            }
-        }
-
-        &_paragraph {
-            margin: 1rem 0;
-
-            @include phone {
-                display: none;
-            }
-        }
+      }
     }
 
+    &_paragraph {
+      margin: 1rem 0;
+
+      @include phone {
+        display: none;
+      }
+    }
+  }
 }
 
 .main__status {
-    &-success,&-fail  {
-        padding: 1rem;
-        display: flex;
-        opacity: 0;
-        position: absolute;
-        align-items: center;  
-        justify-content: center;
-        flex-wrap: nowrap; 
-        color: $color-darkgreen;
+  &-success,
+  &-fail {
+    padding: 1rem;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: $color-darkgreen;
 
-        img {
-            width: $universal-icon-size;
-            height: $universal-icon-size;  
-        }
-
-        p {
-            margin-left: 1rem;
-        }
+    img {
+      width: $universal-icon-size;
+      height: $universal-icon-size;
     }
 
-    &-success {
-        color: $color-darkgreen;
-        border: 1px solid  $color-darkgreen;
-        background-color: $color-lightgreen;
+    p {
+      margin-left: 1rem;
     }
+  }
 
-    &-fail {
-        color: $color-mediumpink;
-        border: 1px solid $color-mediumpink;
-        background-color: $color-lightpink;
-    }
+  &-success {
+    color: $color-darkgreen;
+    border: 1px solid $color-darkgreen;
+    background-color: $color-lightgreen;
+  }
 
+  &-fail {
+    color: $color-mediumpink;
+    border: 1px solid $color-mediumpink;
+    background-color: $color-lightpink;
+  }
 }
