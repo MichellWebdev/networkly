@@ -1,5 +1,11 @@
 //MEDIA QUERIES
 
+@mixin medium-desk {
+  @media (max-width: 1550px) {
+    @content;
+  }
+}
+
 @mixin small-desk {
   @media (max-width: 1100px) {
     @content;
