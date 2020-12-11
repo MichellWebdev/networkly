@@ -4,14 +4,10 @@
     width: 45%;
     margin: 0 12px;
     margin-bottom: 20px;
+    height: auto;
 
     border: 1px solid $color-lightbeige;
     border-radius: 1rem;
-
-
-    @include small-desk {
-        width: 90%;
-    }
 
     @include tablet {
         width: 90%;
@@ -32,41 +28,25 @@
         }
     }
 
-    @include phone {
-        width: 90%;
-        padding: 20px;
-
-        &_header {
-            &_name {
-                font-size: 2rem;
-            }
-
-            &_date {
-                font-size: 2rem;
-            }
-        }
-
-        &_content {
-            font-size: 2rem;
-        }
-    }
-
     &_header{
         
+        padding: 5px;
+
         display: grid;
         grid-template: 
-        "logo name name" 25px
-        "logo star date" 25px
-        / 20% 50% 30%;
+        "logo name name" 30px
+        "logo star date" 30px
+        / 30% 40% 30%;
 
         &_logo{
-            padding: 10px;
+            padding: 5px;
+            // padding-left: 15px;
             grid-area: logo;
-            align-items: center;
             
             img {
                 border: 1px solid $neutral-lightgrey;
-                width: 100%;
+                // width: 100%;
+                height: 100%;
             }
         }
 
@@ -79,14 +59,17 @@
         // home_article_job_header_star
         &_star{
             grid-area: star;
-            padding: 10px;
+            padding-left: 10px;
+            padding-top: 5px;
+            vertical-align: baseline;
         }
 
         &_date{
             grid-area: date;
             padding: 10px;
             color: $neutral-mediumgrey2;
-            font-size: 1rem;
+            font-size: 10px;
+            text-align: left;
         }
     }
 
@@ -106,6 +89,158 @@
         div {
             margin: 0 auto;
             padding: 10px 0;
+        }
+    }
+}
+
+@include medium-desk {
+    .home_article_job {
+
+        width: 80%;
+        margin-left: 10%;
+        padding: 10px;
+
+        &_header{
+            padding: 5px;
+    
+            display: grid;
+            grid-template: 
+            "logo name name" 30px
+            "logo star date" 30px
+            / 30% 40% 30%;
+    
+            &_logo{
+                padding: 10px;
+                grid-area: logo;
+                
+                img {
+                    border: 1px solid $neutral-lightgrey;
+                    width: 45px;
+                    height: auto;
+                }
+            }
+    
+            &_name{
+                grid-area: name;
+                padding: 10px;
+                font-weight: 700;
+                font-size: 20px;
+            }
+    
+            // home_article_job_header_star
+            &_star{
+                grid-area: star;
+                padding-left: 10px;
+                padding-top: 8px;
+                vertical-align: baseline;
+                font-size: 0.5rem;
+            }
+
+            &_date {
+                font-size: 12px;
+            }
+
+        }
+    }
+}
+
+@include small-desk {
+    .home_article_job {
+
+        width: 80%;
+        margin-left: 10%;
+        padding: 10px;
+
+        &_header{
+            padding: 5px;
+    
+            display: grid;
+            grid-template: 
+            "logo name name" 30px
+            "logo star star" 30px
+            / 30% 40% 30%;
+    
+            &_logo{
+                padding: 10px;
+                grid-area: logo;
+                
+                img {
+                    border: 1px solid $neutral-lightgrey;
+                    width: 45px;
+                    height: auto;
+                }
+            }
+    
+            &_name{
+                grid-area: name;
+                padding: 10px;
+                font-weight: 700;
+                font-size: 20px;
+            }
+    
+            // home_article_job_header_star
+            &_star{
+                grid-area: star;
+                padding-left: 10px;
+                padding-top: 8px;
+                vertical-align: baseline;
+                font-size: 0.5rem;
+            }
+
+            &_date {
+                font-size: 12px;
+                display: none;
+            }
+
+        }
+    }
+}
+
+@include phone {
+    .home_article_job {
+
+        width: 80%;
+        margin-left: 10%;
+        padding: 10px;
+
+        &_header {
+
+            display: grid;
+            grid-template: 
+            "logo name name" 30px
+            "logo star date" 30px
+            / 20% 50% 30%;
+
+            &_logo {
+                img{
+                    width: 50px;
+                    height: auto;
+                }
+            }
+            
+            &_name {
+                padding: 8px;
+                margin-left: 15px;
+                font-size: 20px;
+            }
+
+            &_star {
+                font-size: 12px;
+                margin-left: 15px;
+            }
+
+            &_date {
+                grid-area: date;
+                display: inline;
+                padding: 10px;
+                color: $neutral-mediumgrey2;
+                font-size: 13px;
+                text-align: left;
+            }
+        }
+
+        &_content {
+            font-size: 2rem;
         }
     }
 }
