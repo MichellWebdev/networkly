@@ -20,10 +20,10 @@
     transform: translateX(100%); } }
 
 .slideOut {
-  animation: slideOut 3s 1 forwards; }
+  animation: slideOut 1s 1 forwards; }
 
 .slideIn {
-  animation: slideIn 2s 1 forwards; }
+  animation: slideIn 1s 1 forwards; }
 
 @keyframes fadeIn {
   from {
@@ -38,10 +38,10 @@
     opacity: 0; } }
 
 .fadeIn {
-  animation: fadeIn 2s 1 forwards; }
+  animation: fadeIn 1s 1 forwards; }
 
 .fadeOut {
-  animation: fadeOut 2s 1 forwards; }
+  animation: fadeOut 1s 1 forwards; }
 
 *,
 *::after,
@@ -505,23 +505,23 @@ body {
   margin-top: 5vh;
   margin-bottom: 8vh;
   display: grid;
-  grid-template: "left middle right" auto / 15vw 20vw 25vw; }
+  grid-template: "left middle right" auto / 15vw 20vw 25vw; }
   @media (max-width: 1100px) {
     .main__create_events {
       width: 60vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; } }
   @media (max-width: 768px) {
     .main__create_events {
       width: 50vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; } }
   @media (max-width: 600px) {
     .main__create_events {
       width: 90vw;
-      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
+      grid-template: "middle" auto "left2" auto "right" auto / 1fr; }
       .main__create_events__left {
         display: none; }
       .main__create_events input {
@@ -1306,7 +1306,7 @@ input::placeholder {
   .home_article_job_header {
     padding: 5px;
     display: grid;
-    grid-template: "logo name name" 30px "logo star date" 30px / 30% 40% 30%; }
+    grid-template: "logo name name" 30px "logo star date" 30px / 30% 40% 30%; }
     .home_article_job_header_logo {
       padding: 5px;
       grid-area: logo; }
@@ -1346,7 +1346,7 @@ input::placeholder {
     .home_article_job_header {
       padding: 5px;
       display: grid;
-      grid-template: "logo name name" 30px "logo star date" 30px / 30% 40% 30%; }
+      grid-template: "logo name name" 30px "logo star date" 30px / 30% 40% 30%; }
       .home_article_job_header_logo {
         padding: 10px;
         grid-area: logo; }
@@ -1376,7 +1376,7 @@ input::placeholder {
     .home_article_job_header {
       padding: 5px;
       display: grid;
-      grid-template: "logo name name" 30px "logo star star" 30px / 30% 40% 30%; }
+      grid-template: "logo name name" 30px "logo star star" 30px / 30% 40% 30%; }
       .home_article_job_header_logo {
         padding: 10px;
         grid-area: logo; }
@@ -1406,7 +1406,7 @@ input::placeholder {
     padding: 10px; }
     .home_article_job_header {
       display: grid;
-      grid-template: "logo name name" 30px "logo star date" 30px / 20% 50% 30%; }
+      grid-template: "logo name name" 30px "logo star date" 30px / 20% 50% 30%; }
       .home_article_job_header_logo img {
         width: 50px;
         height: auto; }
@@ -2058,7 +2058,7 @@ input::placeholder {
     max-height: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image img {
       min-height: 230px;
       height: auto;
@@ -2084,7 +2084,7 @@ input::placeholder {
     max-height: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image img {
       min-height: 160px;
       height: auto;
@@ -2108,11 +2108,11 @@ input::placeholder {
 
 @media (max-width: 768px) {
   margin-bottom: 20px;
-  grid-template: "image" auto "header" auto "content" auto / 1fr;
+  grid-template: "image" auto "header" auto "content" auto / 1fr;
   .home_article_post {
     width: 70%;
     max-height: 600px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image {
       height: 200px; }
       .home_article_post-image img {
@@ -2134,10 +2134,10 @@ input::placeholder {
 
 @media (max-width: 600px) {
   margin-bottom: 20px;
-  grid-template: "image" auto "header" auto "content" auto / 1fr;
+  grid-template: "image" auto "header" auto "content" auto / 1fr;
   .home_article_post {
     max-height: 600px;
-    grid-template: "image" auto "header" auto "content" auto / 1fr; }
+    grid-template: "image" auto "header" auto "content" auto / 1fr; }
     .home_article_post-image {
       height: 200px; }
       .home_article_post-image img {

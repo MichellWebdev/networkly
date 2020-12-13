@@ -30,11 +30,11 @@ if(select(".main__status-success")) {
     setTimeout(() => {
         failContainer.classList.add("fadeOut");
         successContainer.classList.add("fadeIn");
-    }, 2000);
+    }, 1500);
     
     setTimeout(() => {
         successContainer.classList.add("fadeOut");
-    }, 4000);
+    }, 2500);
 }
 
 
